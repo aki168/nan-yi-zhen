@@ -1,8 +1,13 @@
 $(document).ready(function() {
   $('.nav--item').click(function(e) {
     e.preventDefault();
-    $('.nav--item--detail').hide();
     var detail = $(this).find('.nav--item--detail');
+    detail.slideToggle();
+  });
+
+  $('.nav--mobile .nav--item').click(function(e) {
+    e.preventDefault();
+    var detail = $(this).find('.nav--item--detail--mobile');
     detail.slideToggle();
   });
 

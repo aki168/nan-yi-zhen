@@ -96,12 +96,13 @@ body {
   position: absolute;
   top: 60px;
   background-color: rgba(200, 181, 168, 0.6);
-  padding: 16px;
+  padding: 20px 12px;
   width: 180px;
   display: none;
   z-index: 2;
 }
 .nav--item--detail--mobile {
+  display: none;
   padding-top: 4px;
   font-size: medium;
 }
