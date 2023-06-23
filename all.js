@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  $(".nav--item").click(function (e) {
-    e.preventDefault();
+  $(".nav--item").hover(function (e) {
     var detail = $(this).find(".nav--item--detail");
-    detail.slideToggle();
+    detail.show("slow");
+    $(this).siblings().find(".nav--item--detail").hide();
   });
 
   $(".nav--mobile .nav--item").click(function (e) {
@@ -11,9 +11,14 @@ $(document).ready(function () {
     detail.slideToggle();
   });
 
+  $(".index--reserve--item").hover(function(e){
+    var detail = $(this).find("span");
+    detail.toggle();
+  })
+
   $(".footer--icons--top").click(function () {
     e.preventDefault();
-    $("html,body").animate({ scrollTop: 0 }, 2000);
+    $("html, body").animate({ scrollTop: 0 }, 2000);
   });
 
   $(".nav--mobile--open").click(function () {
@@ -30,15 +35,6 @@ const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
   autoplay: {
-    delay: 5000,
-  },
-  // If we need pagination
-  // pagination: {
-  //   el: ".swiper-pagination",
-  // },
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    delay: 4000,
   },
 });

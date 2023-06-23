@@ -1,13 +1,15 @@
 body {
-  font-family: $font-family-1;
+  color: $main-text-1;
+  font-family: $font-family-2;
   letter-spacing: 0.1em;
 }
+
 .nyz-container {
   margin: 0 auto;
   max-width: 1280px;
 }
+
 .nav {
-  font-family: $font-family-2;
   background-color: $main-bg-1;
   color: $main-text-1;
   padding: 32px 0;
@@ -39,11 +41,153 @@ body {
   }
 }
 
+.index--portfolio--title {
+  letter-spacing: 0.2em;
+  margin: 16px -100px;
+  padding: 24px 82px;
+  display: inline-block;
+  background-image: url("../images/index/portfolioTitleBg.png");
+  background-repeat: no-repeat;
+  background-position: right 0;
+  h2 {
+    font-family: $font-family-3;
+  }
+  h3 {
+    position: relative;
+  }
+  h3::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    height: 1px;
+    width: 100px;
+    display: block;
+    background-color: $main-text-1;
+  }
+}
+.portfolio--card {
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 0.2em;
+}
+.portfolio--card:hover::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 300px;
+  width: 300px;
+  display: block;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+.index--wrap {
+  padding-bottom: 60px;
+  background: url("../images/index/portfolioBgLeft\(white\)_05.png") left bottom
+      no-repeat,
+    url("../images/index/portfolioRight\(white\).jpg") right bottom no-repeat;
+}
+
+.index--price--title {
+  letter-spacing: 0.2em;
+  padding: 24px 82px;
+  display: inline-block;
+  background-image: url("../images/index/portfolioTitleBg.png");
+  background-repeat: no-repeat;
+  background-position: right 0;
+  h2 {
+    font-family: $font-family-3;
+  }
+  h3 {
+    position: relative;
+  }
+  h3::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    height: 1px;
+    width: 24px;
+    display: block;
+    background-color: $main-text-1;
+  }
+}
+
+.index--reserve {
+  position: relative;
+  padding-top: 200px;
+  background-image: url("../images/pattern01.jpg");
+  background-repeat: no-repeat;
+  background-position: right 0;
+}
+
+.index--reserve--title {
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  letter-spacing: 0.2em;
+  margin: 16px 0px;
+  padding: 24px 82px;
+  display: inline-block;
+  h2 {
+    font-family: $font-family-3;
+  }
+  h3 {
+    position: relative;
+  }
+  h3::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    height: 1px;
+    width: 60px;
+    display: block;
+    background-color: $main-text-1;
+  }
+}
+
+.index--reserve--item {
+  position: relative;
+  span {
+    display: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+  }
+}
+
+.index--reserve--card {
+  position: relative;
+}
+
+.index--reserve--card:hover::after {
+  content: "";
+  color: white;
+  z-index: 2;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-image: url("../images/index/hoverEffect.jpg");
+  background-size: cover;
+  opacity: 60%;
+}
+
 .footer {
   background-image: url("../images/footer/footerBg.png");
   background-position-y: -160px;
   background-repeat: repeat-x;
-  font-family: $font-family-2;
   color: $main-text-1;
   &--inner {
     position: relative;
@@ -59,25 +203,40 @@ body {
     top: 30%;
   }
   &--end {
+    font-family: $font-family-1;
     color: white;
     background-color: $main-bg-2;
   }
 }
+@media (max-width: 1280px) {
+  .index--wrap {
+    background: url("../images/index/portfolioRight\(white\).jpg") right bottom
+      no-repeat;
+    background-size: 30%;
+  }
+}
 
 @media (max-width: 768px) {
+  .index--wrap {
+    background: none;
+  }
   .footer {
     background-position: 0px;
+  }
+  .index--portfolio--title {
+    margin: 16px 0px;
   }
 }
 
 // swiper-config
 .swiper {
   height: 87vh;
-  .swiper-slide{
+  .swiper-slide {
     background-size: cover;
     background-position: center;
   }
-  .swiper-button-next,.swiper-button-prev {
+  .swiper-button-next,
+  .swiper-button-prev {
     display: none;
   }
   .slider-1 {
