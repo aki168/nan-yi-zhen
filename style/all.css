@@ -85,10 +85,25 @@ body {
   padding: 32px 0;
 }
 .nav--item {
+  position: relative;
   padding: 0px 24px;
 }
 .nav--item .sub-text {
   font-family: "GFS Didot", serif;
+}
+.nav--item--detail {
+  border-radius: 0px 20px 20px 20px;
+  position: absolute;
+  top: 60px;
+  background-color: rgba(200, 181, 168, 0.6);
+  padding: 16px;
+  width: 180px;
+  display: none;
+  z-index: 2;
+}
+.nav--item--detail--mobile {
+  padding-top: 4px;
+  font-size: medium;
 }
 .nav--logo {
   max-width: 240px;
@@ -101,13 +116,24 @@ body {
   font-family: "Noto Serif TC", serif;
   color: #927266;
 }
-.footer-item {
-  width: 23%;
+.footer--inner {
+  position: relative;
 }
-.footer-item a {
+.footer--item a {
   letter-spacing: 0.16em;
 }
-.footer-end {
+.footer--icons {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+.footer--end {
   color: white;
   background-color: #c8b5a8;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    background-position: 0px;
+  }
 }/*# sourceMappingURL=all.css.map */

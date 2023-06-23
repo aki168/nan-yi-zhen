@@ -11,11 +11,26 @@ body {
   background-color: $main-bg-1;
   color: $main-text-1;
   padding: 32px 0;
-
   &--item {
+    position: relative;
     padding: 0px 24px;
     .sub-text {
       font-family: $font-family-3;
+    }
+    &--detail {
+      border-radius: 0px 20px 20px 20px;
+      position: absolute;
+      top: 60px;
+      background-color: rgb(200, 181, 168, 0.6);
+      padding: 16px;
+      width: 180px;
+      display: none;
+      z-index: 2;
+      // background-image: url("/");
+      &--mobile {
+        padding-top: 4px;
+        font-size: medium;
+      }
     }
   }
 
@@ -30,18 +45,31 @@ body {
   background-repeat: repeat-x;
   font-family: $font-family-2;
   color: $main-text-1;
-  &-item {
-    width: 23%;
+  &--inner {
+    position: relative;
+  }
+  &--item {
     a {
       letter-spacing: 0.16em;
     }
   }
-  &-end {
+  &--icons {
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+  &--end {
     color: white;
     background-color: $main-bg-2;
   }
 }
 
+
+@media (max-width: 768px) {
+  .footer {
+    background-position: 0px;
+  }
+}
 // .active {
 //   display: block;
 //   padding: 5px;
