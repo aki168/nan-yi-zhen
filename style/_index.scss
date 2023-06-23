@@ -69,3 +69,30 @@ body {
     background-position: 0px;
   }
 }
+
+// swiper-config
+.swiper {
+  height: 87vh;
+  .swiper-slide{
+    background-size: cover;
+    background-position: center;
+  }
+  .swiper-button-next,.swiper-button-prev {
+    display: none;
+  }
+  .slider-1 {
+    background-image: url("../images/南以真紋繡_大圖01.jpg");
+  }
+  .slider-2 {
+    background-image: url("../images/南以真紋繡_大圖02.jpg");
+  }
+
+  @media (max-width: 768px) {
+    .slider-1 {
+      background-image: url("../images/手機大圖輪播01.jpg");
+    }
+    .slider-2 {
+      background-image: url("../images/手機大圖輪播02.jpg");
+    }
+  }
+}

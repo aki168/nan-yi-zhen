@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -136,5 +137,29 @@ body {
 @media (max-width: 768px) {
   .footer {
     background-position: 0px;
+  }
+}
+.swiper {
+  height: 87vh;
+}
+.swiper .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.swiper .swiper-button-next, .swiper .swiper-button-prev {
+  display: none;
+}
+.swiper .slider-1 {
+  background-image: url("../images/南以真紋繡_大圖01.jpg");
+}
+.swiper .slider-2 {
+  background-image: url("../images/南以真紋繡_大圖02.jpg");
+}
+@media (max-width: 768px) {
+  .swiper .slider-1 {
+    background-image: url("../images/手機大圖輪播01.jpg");
+  }
+  .swiper .slider-2 {
+    background-image: url("../images/手機大圖輪播02.jpg");
   }
 }/*# sourceMappingURL=all.css.map */
