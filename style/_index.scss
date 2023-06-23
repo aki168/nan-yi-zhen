@@ -1,7 +1,51 @@
-.active {
-  display: block;
-  padding: 5px;
-  text-decoration: none;
-  border: 1px solid #00688b;
-  font-size: 20px;
+body {
+  font-family: $font-family-1;
+  letter-spacing: 0.1em;
 }
+.nyz-container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.nav {
+  font-family: $font-family-2;
+  background-color: $main-bg-1;
+  color: $main-text-1;
+  padding: 32px 0;
+
+  &--item {
+    padding: 0px 24px;
+    .sub-text {
+      font-family: $font-family-3;
+    }
+  }
+
+  &--logo {
+    max-width: 240px;
+  }
+}
+
+.footer {
+  background-image: url("../images/footer/footerBg.png");
+  background-position-y: -160px;
+  background-repeat: repeat-x;
+  font-family: $font-family-2;
+  color: $main-text-1;
+  &-item {
+    width: 23%;
+    a {
+      letter-spacing: 0.16em;
+    }
+  }
+  &-end {
+    color: white;
+    background-color: $main-bg-2;
+  }
+}
+
+// .active {
+//   display: block;
+//   padding: 5px;
+//   text-decoration: none;
+//   border: 1px solid #00688b;
+//   font-size: 20px;
+// }

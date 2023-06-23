@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -66,10 +68,46 @@ img {
   box-sizing: border-box;
 }
 
-.active {
-  display: block;
-  padding: 5px;
-  text-decoration: none;
-  border: 1px solid #00688b;
-  font-size: 20px;
+body {
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.nyz-container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.nav {
+  font-family: "Noto Serif TC", serif;
+  background-color: #e5d0be;
+  color: #927266;
+  padding: 32px 0;
+}
+.nav--item {
+  padding: 0px 24px;
+}
+.nav--item .sub-text {
+  font-family: "GFS Didot", serif;
+}
+.nav--logo {
+  max-width: 240px;
+}
+
+.footer {
+  background-image: url("../images/footer/footerBg.png");
+  background-position-y: -160px;
+  background-repeat: repeat-x;
+  font-family: "Noto Serif TC", serif;
+  color: #927266;
+}
+.footer-item {
+  width: 23%;
+}
+.footer-item a {
+  letter-spacing: 0.16em;
+}
+.footer-end {
+  color: white;
+  background-color: #c8b5a8;
 }/*# sourceMappingURL=all.css.map */
