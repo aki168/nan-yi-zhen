@@ -4,12 +4,19 @@ body {
   letter-spacing: 0.1em;
 }
 
+main {
+  min-height: 48vh;
+}
+
+
+
 .nyz-container {
   margin: 0 auto;
   max-width: 1280px;
 }
 
 .nav {
+  z-index: 1;
   background-color: $main-bg-1;
   color: $main-text-1;
   padding: 32px 0;
@@ -39,6 +46,25 @@ body {
   &--logo {
     max-width: 240px;
   }
+}
+
+.sider {
+  width: 156px;
+  &--menu {
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+  }
+  &--title {
+    color: $main-text-2;
+    font-family: $font-family-3;
+    font-size: 40px;
+  }
+}
+
+.breadcrumb {
+  font-family: $font-family-3;
+  font-size: larger;
 }
 
 .index--portfolio--title {
@@ -85,14 +111,12 @@ body {
   border: 1px solid white;
   border-radius: 8px;
 }
-
 .index--wrap {
   padding-bottom: 60px;
   background: url("../images/index/portfolioBgLeft\(white\)_05.png") left bottom
       no-repeat,
     url("../images/index/portfolioRight\(white\).jpg") right bottom no-repeat;
 }
-
 .index--price--title {
   letter-spacing: 0.2em;
   padding: 24px 82px;
@@ -118,7 +142,6 @@ body {
     background-color: $main-text-1;
   }
 }
-
 .index--reserve {
   position: relative;
   padding-top: 200px;
@@ -126,7 +149,6 @@ body {
   background-repeat: no-repeat;
   background-position: right 0;
 }
-
 .index--reserve--title {
   z-index: 0;
   position: absolute;
@@ -154,34 +176,57 @@ body {
     background-color: $main-text-1;
   }
 }
-
 .index--reserve--item {
   position: relative;
   span {
+    font-size: 20px;
     display: none;
     color: white;
     position: absolute;
     top: 50%;
+    right: 40%;
+    z-index: 2;
+    font-family: $font-family-3;
   }
 }
-
 .index--reserve--card {
   position: relative;
 }
-
 .index--reserve--card:hover::after {
   content: "";
   color: white;
-  z-index: 2;
   position: absolute;
   right: 0px;
   top: 0px;
   height: 100%;
   width: 100%;
   display: block;
-  background-image: url("../images/index/hoverEffect.jpg");
+  background-image: url("../images/index/矩形\ 154.png");
   background-size: cover;
-  opacity: 60%;
+  opacity: 90%;
+}
+.about--wrap{
+  background-image: url("../images/pattern02.png");
+  background-repeat: no-repeat;
+  background-position: left 30% bottom;
+  &--bg {
+    z-index: -1;
+    background-image: url("../images/about/向量圖智慧型物件.png");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 540px;
+    position: absolute;
+  }
+}
+.about--contain {
+  width: calc(100% - 156px);
+  color: $main-text-2;
+  &--title{
+    color: $main-text-1;
+  }
+}
+.about--contact--list{
+  color: $main-text-1;
 }
 
 .footer {
@@ -215,7 +260,6 @@ body {
     background-size: 30%;
   }
 }
-
 @media (max-width: 768px) {
   .index--wrap {
     background: none;
@@ -245,7 +289,6 @@ body {
   .slider-2 {
     background-image: url("../images/南以真紋繡_大圖02.jpg");
   }
-
   @media (max-width: 768px) {
     .slider-1 {
       background-image: url("../images/手機大圖輪播01.jpg");

@@ -16,19 +16,14 @@ $(document).ready(function () {
     detail.toggle();
   })
 
-  $(".footer--icons--top").click(function () {
+  $(".footer--icons--top").click(function (e) {
     e.preventDefault();
-    $("html, body").animate({ scrollTop: 0 }, 2000);
+    $("html, body").animate({ scrollTop: 0 }, 1000);
   });
 
   $(".nav--mobile--open").click(function () {
     $(".nav--mobile").slideToggle();
   });
-});
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "ArrowLeft") prevSlide();
-  e.key === "ArrowRight" && nextSlide();
 });
 
 const swiper = new Swiper(".swiper", {
