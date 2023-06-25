@@ -388,10 +388,6 @@ main {
   .portfolio--wrap--bg {
     display: none;
   }
-  .portfolio--card:hover::after {
-    right: 1%;
-    top: 1%;
-  }
   .footer {
     background-position: 0px;
   }
