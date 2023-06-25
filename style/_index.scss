@@ -62,6 +62,10 @@ main {
 .breadcrumb {
   font-family: $font-family-3;
   font-size: larger;
+  span {
+    margin-inline-end: 8px;
+    padding-inline: 0;
+  }
 }
 
 .index--portfolio--title {
@@ -97,9 +101,9 @@ main {
   letter-spacing: 0.2em;
 }
 .portfolio--card:hover::after {
+  position: absolute;
   content: "";
   z-index: 2;
-  position: absolute;
   right: 15px;
   top: 15px;
   height: 300px;
@@ -202,7 +206,7 @@ main {
   background-size: cover;
   opacity: 90%;
 }
-.about--wrap{
+.about--wrap {
   background-image: url("../images/pattern02.png");
   background-repeat: no-repeat;
   background-position: left 30% bottom;
@@ -216,15 +220,45 @@ main {
   }
 }
 .about--contain {
-
   width: calc(100% - 156px);
   color: $main-text-2;
-  &--title{
+  &--title {
     color: $main-text-1;
   }
 }
-.about--contact--list{
+.about--contact--list {
   color: $main-text-1;
+}
+.portfolio--wrap {
+  &--bg {
+    z-index: -1;
+    background-image: url("../images/about/向量圖智慧型物件.png");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 540px;
+    position: absolute;
+  }
+}
+.reserve--list {
+  line-height: 1.6;
+  dt {
+    padding: 0 0 0 36px;
+    position: relative;
+  }
+  dt::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    height: 1px;
+    width: 30px;
+    display: block;
+    background-color: $main-text-2;
+  }
+  dd {
+    margin-bottom: 20px;
+  }
 }
 
 .footer {
@@ -259,13 +293,18 @@ main {
   }
 }
 @media (max-width: 768px) {
-  .index--wrap {
+  .index--wrap, .about--wrap {
     background: none;
   }
-  .about--wrap{
+  .about--wrap,
+  .portfolio--wrap {
     &--bg {
-      background: none;
+      display: none;
     }
+  }
+  .portfolio--card:hover::after {
+    right: 1%;
+    top: 1%;
   }
   .footer {
     background-position: 0px;
@@ -306,4 +345,17 @@ main {
       background-image: url("../images/手機大圖輪播02.jpg");
     }
   }
+}
+
+.nyz-text-light {
+  color: $main-text-2;
+  font-weight: normal;
+}
+
+.nyz-text-dark {
+  color: $main-text-1;
+}
+
+.nyz-ff-normal {
+  font-family: $font-family-2;
 }

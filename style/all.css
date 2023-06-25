@@ -133,6 +133,11 @@ main {
   font-family: "GFS Didot", serif;
   font-size: larger;
 }
+.breadcrumb span {
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+  padding-inline: 0;
+}
 
 .index--portfolio--title {
   letter-spacing: 0.2em;
@@ -169,9 +174,9 @@ main {
 }
 
 .portfolio--card:hover::after {
+  position: absolute;
   content: "";
   z-index: 2;
-  position: absolute;
   right: 15px;
   top: 15px;
   height: 300px;
@@ -306,6 +311,37 @@ main {
   color: #927266;
 }
 
+.portfolio--wrap--bg {
+  z-index: -1;
+  background-image: url("../images/about/向量圖智慧型物件.png");
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 540px;
+  position: absolute;
+}
+
+.reserve--list {
+  line-height: 1.6;
+}
+.reserve--list dt {
+  padding: 0 0 0 36px;
+  position: relative;
+}
+.reserve--list dt::before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  height: 1px;
+  width: 30px;
+  display: block;
+  background-color: #cbb4a1;
+}
+.reserve--list dd {
+  margin-bottom: 20px;
+}
+
 .footer {
   background-image: url("../images/footer/footerBg.png");
   background-position-y: -160px;
@@ -336,11 +372,16 @@ main {
   }
 }
 @media (max-width: 768px) {
-  .index--wrap {
+  .index--wrap, .about--wrap {
     background: none;
   }
-  .about--wrap--bg {
-    background: none;
+  .about--wrap--bg,
+  .portfolio--wrap--bg {
+    display: none;
+  }
+  .portfolio--card:hover::after {
+    right: 1%;
+    top: 1%;
   }
   .footer {
     background-position: 0px;
@@ -379,4 +420,17 @@ main {
   .swiper .slider-2 {
     background-image: url("../images/手機大圖輪播02.jpg");
   }
+}
+
+.nyz-text-light {
+  color: #cbb4a1;
+  font-weight: normal;
+}
+
+.nyz-text-dark {
+  color: #927266;
+}
+
+.nyz-ff-normal {
+  font-family: "Noto Serif TC", serif;
 }/*# sourceMappingURL=all.css.map */
