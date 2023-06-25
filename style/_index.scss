@@ -219,6 +219,16 @@ main {
     position: absolute;
   }
 }
+.reserve--wrap {
+  &--bg {
+    z-index: -1;
+    background-image: url("../images/about/向量圖智慧型物件.png");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 540px;
+    position: absolute;
+  }
+}
 .about--contain {
   width: calc(100% - 156px);
   color: $main-text-2;
