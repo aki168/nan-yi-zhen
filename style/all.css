@@ -122,7 +122,6 @@ main {
 .sider--menu {
   font-weight: bold;
   text-align: center;
-  width: 100px;
 }
 .sider--title {
   color: #cbb4a1;
@@ -340,11 +339,20 @@ main {
   .index--wrap {
     background: none;
   }
+  .about--wrap--bg {
+    background: none;
+  }
   .footer {
     background-position: 0px;
   }
   .index--portfolio--title {
     margin: 16px 0px;
+  }
+  .sider {
+    width: 100%;
+  }
+  .about--contain {
+    width: 100%;
   }
 }
 .swiper {
