@@ -18,7 +18,7 @@ main {
   background-color: $main-bg-1;
   color: $main-text-1;
   padding: 32px 0;
-  &--item {
+  &--item, &--item--double {
     position: relative;
     padding: 0px 24px;
     .sub-text {
@@ -33,6 +33,20 @@ main {
       width: 180px;
       display: none;
       z-index: 2;
+      &--double {
+        border-radius: 0px 20px 20px 20px;
+        position: absolute;
+        top: 60px;
+        background-color: rgb(200, 181, 168, 0.6);
+        padding: 20px 12px;
+        width: 180px;
+        display: none;
+        z-index: 2;
+        &--sub {
+          letter-spacing: 2px;
+          color: white;
+        }
+      }
       &--mobile {
         display: none;
         padding-top: 4px;
@@ -120,11 +134,11 @@ main {
 }
 .index--price--title {
   letter-spacing: 0.2em;
-  padding: 24px 82px;
+  padding: 36px 102px;
   display: inline-block;
-  background-image: url("../images/index/portfolioTitleBg.png");
+  background-image: url("../images/index/橢圓\ 1.png");
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: right 0 top 40%;
   h2 {
     font-family: $font-family-3;
   }
@@ -219,7 +233,9 @@ main {
     position: absolute;
   }
 }
-.reserve--wrap {
+.reserve--wrap,
+.price--wrap,
+.portfolio--wrap {
   &--bg {
     z-index: -1;
     background-image: url("../images/about/向量圖智慧型物件.png");
@@ -238,16 +254,6 @@ main {
 }
 .about--contact--list {
   color: $main-text-1;
-}
-.portfolio--wrap {
-  &--bg {
-    z-index: -1;
-    background-image: url("../images/about/向量圖智慧型物件.png");
-    background-repeat: no-repeat;
-    width: 500px;
-    height: 540px;
-    position: absolute;
-  }
 }
 .reserve--list {
   line-height: 1.6;
@@ -268,6 +274,44 @@ main {
   }
   dd {
     margin-bottom: 20px;
+  }
+}
+.qa {
+  &--title {
+    display: inline-block;
+    color: white;
+    border-radius: 0px 16px 16px 16px;
+    background-color: $main-bg-3;
+    padding: 6px 20px;
+    margin-bottom: 12px;
+  }
+}
+.price {
+  &--title {
+    display: inline-block;
+    color: white;
+    border-radius: 0px 16px 16px 16px;
+    background-color: $main-bg-3;
+    padding: 6px 20px;
+    margin-bottom: 12px;
+    margin-left: -16px;
+  }
+  &--list {
+    margin-bottom: 48px;
+    dt {
+      padding: 8px 0;
+    }
+    dd {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+    &--block {
+      margin: 24px 0 24px -16px;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 0px 16px 16px 16px;
+      border: 2px solid $main-bg-2;
+    }
   }
 }
 
@@ -303,11 +347,13 @@ main {
   }
 }
 @media (max-width: 768px) {
-  .index--wrap, .about--wrap {
+  .index--wrap,
+  .about--wrap {
     background: none;
   }
   .about--wrap,
-  .portfolio--wrap {
+  .portfolio--wrap,
+  .price--wrap {
     &--bg {
       display: none;
     }
@@ -364,4 +410,10 @@ main {
 
 .nyz-ff-normal {
   font-family: $font-family-2;
+}
+
+.horizon {
+  height: 1px;
+  margin: 40px 0;
+  background-color: $main-text-2;
 }

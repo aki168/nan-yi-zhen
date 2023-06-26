@@ -90,14 +90,14 @@ main {
   color: #927266;
   padding: 32px 0;
 }
-.nav--item {
+.nav--item, .nav--item--double {
   position: relative;
   padding: 0px 24px;
 }
-.nav--item .sub-text {
+.nav--item .sub-text, .nav--item--double .sub-text {
   font-family: "GFS Didot", serif;
 }
-.nav--item--detail {
+.nav--item--detail, .nav--item--double--detail {
   border-radius: 0px 20px 20px 20px;
   position: absolute;
   top: 60px;
@@ -107,7 +107,21 @@ main {
   display: none;
   z-index: 2;
 }
-.nav--item--detail--mobile {
+.nav--item--detail--double, .nav--item--double--detail--double {
+  border-radius: 0px 20px 20px 20px;
+  position: absolute;
+  top: 60px;
+  background-color: rgba(200, 181, 168, 0.6);
+  padding: 20px 12px;
+  width: 180px;
+  display: none;
+  z-index: 2;
+}
+.nav--item--detail--double--sub, .nav--item--double--detail--double--sub {
+  letter-spacing: 2px;
+  color: white;
+}
+.nav--item--detail--mobile, .nav--item--double--detail--mobile {
   display: none;
   padding-top: 4px;
   font-size: medium;
@@ -193,11 +207,11 @@ main {
 
 .index--price--title {
   letter-spacing: 0.2em;
-  padding: 24px 82px;
+  padding: 36px 102px;
   display: inline-block;
-  background-image: url("../images/index/portfolioTitleBg.png");
+  background-image: url("../images/index/橢圓 1.png");
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: right 0 top 40%;
 }
 .index--price--title h2 {
   font-family: "GFS Didot", serif;
@@ -299,7 +313,9 @@ main {
   position: absolute;
 }
 
-.reserve--wrap--bg {
+.reserve--wrap--bg,
+.price--wrap--bg,
+.portfolio--wrap--bg {
   z-index: -1;
   background-image: url("../images/about/向量圖智慧型物件.png");
   background-repeat: no-repeat;
@@ -318,15 +334,6 @@ main {
 
 .about--contact--list {
   color: #927266;
-}
-
-.portfolio--wrap--bg {
-  z-index: -1;
-  background-image: url("../images/about/向量圖智慧型物件.png");
-  background-repeat: no-repeat;
-  width: 500px;
-  height: 540px;
-  position: absolute;
 }
 
 .reserve--list {
@@ -349,6 +356,42 @@ main {
 }
 .reserve--list dd {
   margin-bottom: 20px;
+}
+
+.qa--title {
+  display: inline-block;
+  color: white;
+  border-radius: 0px 16px 16px 16px;
+  background-color: #ad9483;
+  padding: 6px 20px;
+  margin-bottom: 12px;
+}
+
+.price--title {
+  display: inline-block;
+  color: white;
+  border-radius: 0px 16px 16px 16px;
+  background-color: #ad9483;
+  padding: 6px 20px;
+  margin-bottom: 12px;
+  margin-left: -16px;
+}
+.price--list {
+  margin-bottom: 48px;
+}
+.price--list dt {
+  padding: 8px 0;
+}
+.price--list dd {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+.price--list--block {
+  margin: 24px 0 24px -16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 0px 16px 16px 16px;
+  border: 2px solid #c8b5a8;
 }
 
 .footer {
@@ -381,11 +424,13 @@ main {
   }
 }
 @media (max-width: 768px) {
-  .index--wrap, .about--wrap {
+  .index--wrap,
+  .about--wrap {
     background: none;
   }
   .about--wrap--bg,
-  .portfolio--wrap--bg {
+  .portfolio--wrap--bg,
+  .price--wrap--bg {
     display: none;
   }
   .footer {
@@ -438,4 +483,10 @@ main {
 
 .nyz-ff-normal {
   font-family: "Noto Serif TC", serif;
+}
+
+.horizon {
+  height: 1px;
+  margin: 40px 0;
+  background-color: #cbb4a1;
 }/*# sourceMappingURL=all.css.map */

@@ -3,13 +3,23 @@ $(document).ready(function () {
     var detail = $(this).find(".nav--item--detail");
     detail.show("slow");
     $(this).siblings().find(".nav--item--detail").hide();
+    $(this).siblings().find(".nav--item--detail--double").hide();
+  });
+
+  $(".nav--item--double").hover(function (e) {
+    var detail = $(this).find(".nav--item--detail--double");
+    detail.show("slow");
+    $(this).siblings().find(".nav--item--detail").hide();
+    $(this).siblings().find(".nav--item--detail--double").hide();
   });
 
   $(".nav--mobile .nav--item").click(function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     var detail = $(this).find(".nav--item--detail--mobile");
-    detail.slideToggle();
+    detail.show("slow");
+    $(this).siblings().find(".nav--item--detail--mobile").hide();
   });
+
 
   $(".index--reserve--item").hover(function(e){
     var detail = $(this).find("span");
