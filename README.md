@@ -1,4 +1,5 @@
-# init project
+# init layout project 
+--by aki
 
 ## Tailwindcss
 
