@@ -3,16 +3,13 @@ body {
   font-family: $font-family-2;
   letter-spacing: 0.1em;
 }
-
 main {
   min-height: 48vh;
 }
-
 .nyz-container {
   margin: 0 auto;
   max-width: 1280px;
 }
-
 .nav {
   z-index: 1;
   background-color: $main-bg-1;
@@ -60,7 +57,6 @@ main {
     max-width: 240px;
   }
 }
-
 .sider {
   width: 156px;
   &--menu {
@@ -73,7 +69,6 @@ main {
     font-size: 40px;
   }
 }
-
 .accordion {
   width: 156px;
   &--menu {
@@ -86,7 +81,6 @@ main {
     font-size: 40px;
   }
 }
-
 .breadcrumb {
   font-family: $font-family-3;
   font-size: larger;
@@ -247,6 +241,19 @@ main {
     position: absolute;
   }
 }
+.news--wrap {
+  background-image: url("../images/pattern02.png");
+  background-repeat: no-repeat;
+  background-position: left 30% bottom 160px;
+  &--bg {
+    z-index: -1;
+    background-image: url("../images/about/向量圖智慧型物件.png");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 540px;
+    position: absolute;
+  }
+}
 .reserve--wrap,
 .price--wrap,
 .portfolio--wrap {
@@ -371,15 +378,21 @@ main {
 }
 @media (max-width: 768px) {
   .index--wrap,
-  .about--wrap {
+  .about--wrap,
+  .news--wrap {
     background: none;
   }
   .about--wrap,
   .portfolio--wrap,
-  .price--wrap {
+  .price--wrap,
+  .news--wrap,
+  .reserve--wrap {
     &--bg {
       display: none;
     }
+  }
+  .portfolio--card:hover::after {
+    display: none;
   }
   .footer {
     background-position: 0px;
@@ -426,18 +439,15 @@ main {
   color: $main-text-2;
   font-weight: normal;
 }
-
 .nyz-text-dark {
   color: $main-text-1;
 }
-
 .nyz-ff-normal {
   font-family: $font-family-2;
 }
 .nyz-ff-didot {
   font-family: $font-family-3;
 }
-
 .horizon {
   height: 1px;
   margin: 40px 0;

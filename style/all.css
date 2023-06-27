@@ -326,6 +326,20 @@ main {
   position: absolute;
 }
 
+.news--wrap {
+  background-image: url("../images/pattern02.png");
+  background-repeat: no-repeat;
+  background-position: left 30% bottom 160px;
+}
+.news--wrap--bg {
+  z-index: -1;
+  background-image: url("../images/about/向量圖智慧型物件.png");
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 540px;
+  position: absolute;
+}
+
 .reserve--wrap--bg,
 .price--wrap--bg,
 .portfolio--wrap--bg {
@@ -449,12 +463,18 @@ main {
 }
 @media (max-width: 768px) {
   .index--wrap,
-  .about--wrap {
+  .about--wrap,
+  .news--wrap {
     background: none;
   }
   .about--wrap--bg,
   .portfolio--wrap--bg,
-  .price--wrap--bg {
+  .price--wrap--bg,
+  .news--wrap--bg,
+  .reserve--wrap--bg {
+    display: none;
+  }
+  .portfolio--card:hover::after {
     display: none;
   }
   .footer {
