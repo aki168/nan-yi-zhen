@@ -69,6 +69,9 @@ img {
   box-sizing: border-box;
 }
 
+/*
+  全域 & 元件
+*/
 body {
   color: #927266;
   font-family: "Noto Serif TC", serif;
@@ -166,6 +169,58 @@ main {
   padding-inline: 0;
 }
 
+.footer {
+  background-image: url("../images/footer/footerBg.png");
+  background-position-y: -160px;
+  background-repeat: repeat-x;
+  color: #927266;
+}
+.footer--inner {
+  position: relative;
+}
+.footer--item a {
+  letter-spacing: 0.16em;
+}
+.footer--icons {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+.footer--end {
+  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+  color: white;
+  background-color: #c8b5a8;
+}
+
+.horizon {
+  height: 1px;
+  margin: 40px 0;
+  background-color: #cbb4a1;
+}
+
+/*
+  通用 class
+*/
+.nyz-text-light {
+  color: #cbb4a1;
+  font-weight: normal;
+}
+
+.nyz-text-dark {
+  color: #927266;
+}
+
+.nyz-ff-normal {
+  font-family: "Noto Serif TC", serif;
+}
+
+.nyz-ff-didot {
+  font-family: "GFS Didot", serif;
+}
+
+/*
+  首頁
+*/
 .index--portfolio--title {
   letter-spacing: 0.2em;
   margin: 16px -100px;
@@ -191,26 +246,6 @@ main {
   width: 100px;
   display: block;
   background-color: #927266;
-}
-
-.portfolio--card {
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 40px;
-  letter-spacing: 0.2em;
-}
-
-.portfolio--card:hover::after {
-  position: absolute;
-  content: "";
-  z-index: 2;
-  right: 15px;
-  top: 15px;
-  height: 300px;
-  width: 300px;
-  display: block;
-  border: 1px solid white;
-  border-radius: 8px;
 }
 
 .index--wrap {
@@ -312,37 +347,15 @@ main {
   opacity: 90%;
 }
 
+/*
+  關於我們
+*/
 .about--wrap {
   background-image: url("../images/pattern02.png");
   background-repeat: no-repeat;
   background-position: left 30% bottom;
 }
 .about--wrap--bg {
-  z-index: -1;
-  background-image: url("../images/about/向量圖智慧型物件.png");
-  background-repeat: no-repeat;
-  width: 500px;
-  height: 540px;
-  position: absolute;
-}
-
-.news--wrap {
-  background-image: url("../images/pattern02.png");
-  background-repeat: no-repeat;
-  background-position: left 30% bottom 160px;
-}
-.news--wrap--bg {
-  z-index: -1;
-  background-image: url("../images/about/向量圖智慧型物件.png");
-  background-repeat: no-repeat;
-  width: 500px;
-  height: 540px;
-  position: absolute;
-}
-
-.reserve--wrap--bg,
-.price--wrap--bg,
-.portfolio--wrap--bg {
   z-index: -1;
   background-image: url("../images/about/向量圖智慧型物件.png");
   background-repeat: no-repeat;
@@ -363,48 +376,41 @@ main {
   color: #927266;
 }
 
-.reserve--list {
-  line-height: 1.6;
-}
-.reserve--list dt {
-  padding: 0 0 0 36px;
+/*
+  紋繡作品
+*/
+.portfolio--card {
   position: relative;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 0.2em;
 }
-.reserve--list dt::before {
+
+.portfolio--card:hover::after {
+  position: absolute;
   content: "";
   z-index: 2;
-  position: absolute;
-  left: 0px;
-  bottom: 10px;
-  height: 1px;
-  width: 30px;
+  right: 15px;
+  top: 15px;
+  height: 300px;
+  width: 300px;
   display: block;
-  background-color: #cbb4a1;
-}
-.reserve--list dd {
-  margin-bottom: 20px;
+  border: 1px solid white;
+  border-radius: 8px;
 }
 
-.qa--title,
-.news--title {
-  display: inline-block;
-  color: white;
-  border-radius: 0px 16px 16px 16px;
-  background-color: #ad9483;
-  padding: 6px 20px;
-  margin-bottom: 12px;
-}
-.qa--contain,
-.news--contain {
-  width: 100%;
-}
-.qa--card:hover,
-.news--card:hover {
-  background-image: url("../images/news/147.png");
-  background-size: 100%;
+.portfolio--wrap--bg {
+  z-index: -1;
+  background-image: url("../images/about/向量圖智慧型物件.png");
   background-repeat: no-repeat;
+  width: 500px;
+  height: 540px;
+  position: absolute;
 }
 
+/*
+  服務價格
+*/
 .price--title {
   display: inline-block;
   color: white;
@@ -432,29 +438,80 @@ main {
   border: 2px solid #c8b5a8;
 }
 
-.footer {
-  background-image: url("../images/footer/footerBg.png");
-  background-position-y: -160px;
-  background-repeat: repeat-x;
-  color: #927266;
+/*
+  專業文章
+*/
+.news--wrap {
+  background-image: url("../images/pattern02.png");
+  background-repeat: no-repeat;
+  background-position: left 30% bottom 160px;
 }
-.footer--inner {
-  position: relative;
-}
-.footer--item a {
-  letter-spacing: 0.16em;
-}
-.footer--icons {
+.news--wrap--bg {
+  z-index: -1;
+  background-image: url("../images/about/向量圖智慧型物件.png");
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 540px;
   position: absolute;
-  right: 0;
-  top: 30%;
-}
-.footer--end {
-  font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
-  color: white;
-  background-color: #c8b5a8;
 }
 
+/*
+  預約與須知 
+*/
+.reserve--list {
+  line-height: 1.6;
+}
+.reserve--list dt {
+  padding: 0 0 0 36px;
+  position: relative;
+}
+.reserve--list dt::before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  height: 1px;
+  width: 30px;
+  display: block;
+  background-color: #cbb4a1;
+}
+.reserve--list dd {
+  margin-bottom: 20px;
+}
+
+/*
+  預約與須知  服務價格
+*/
+.reserve--wrap--title,
+.price--wrap--title,
+.qa--title,
+.news--title {
+  display: inline-block;
+  color: white;
+  border-radius: 0px 16px 16px 16px;
+  background-color: #ad9483;
+  padding: 6px 20px;
+  margin-bottom: 12px;
+}
+.reserve--wrap--contain,
+.price--wrap--contain,
+.qa--contain,
+.news--contain {
+  width: 100%;
+}
+.reserve--wrap--card:hover,
+.price--wrap--card:hover,
+.qa--card:hover,
+.news--card:hover {
+  background-image: url("../images/news/147.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*
+  RWD
+*/
 @media (max-width: 1280px) {
   .index--wrap {
     background: url("../images/index/portfolioRight(white).jpg") right bottom no-repeat;
@@ -474,6 +531,9 @@ main {
   .reserve--wrap--bg {
     display: none;
   }
+  .price--title {
+    margin-left: 4px;
+  }
   .portfolio--card:hover::after {
     display: none;
   }
@@ -490,6 +550,9 @@ main {
     width: 100%;
   }
 }
+/*
+  輪播設定 swiper-config
+*/
 .swiper {
   height: 87vh;
 }
@@ -514,27 +577,4 @@ main {
   .swiper .slider-2 {
     background-image: url("../images/手機大圖輪播02.jpg");
   }
-}
-
-.nyz-text-light {
-  color: #cbb4a1;
-  font-weight: normal;
-}
-
-.nyz-text-dark {
-  color: #927266;
-}
-
-.nyz-ff-normal {
-  font-family: "Noto Serif TC", serif;
-}
-
-.nyz-ff-didot {
-  font-family: "GFS Didot", serif;
-}
-
-.horizon {
-  height: 1px;
-  margin: 40px 0;
-  background-color: #cbb4a1;
 }/*# sourceMappingURL=all.css.map */

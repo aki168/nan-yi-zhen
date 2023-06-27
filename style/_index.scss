@@ -1,3 +1,6 @@
+/*
+  全域 & 元件
+*/
 body {
   color: $main-text-1;
   font-family: $font-family-2;
@@ -89,7 +92,57 @@ main {
     padding-inline: 0;
   }
 }
+.footer {
+  background-image: url("../images/footer/footerBg.png");
+  background-position-y: -160px;
+  background-repeat: repeat-x;
+  color: $main-text-1;
+  &--inner {
+    position: relative;
+  }
+  &--item {
+    a {
+      letter-spacing: 0.16em;
+    }
+  }
+  &--icons {
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+  &--end {
+    font-family: $font-family-1;
+    color: white;
+    background-color: $main-bg-2;
+  }
+}
+.horizon {
+  height: 1px;
+  margin: 40px 0;
+  background-color: $main-text-2;
+}
 
+/*
+  通用 class
+*/
+.nyz-text-light {
+  color: $main-text-2;
+  font-weight: normal;
+}
+.nyz-text-dark {
+  color: $main-text-1;
+}
+.nyz-ff-normal {
+  font-family: $font-family-2;
+}
+.nyz-ff-didot {
+  font-family: $font-family-3;
+}
+
+
+/*
+  首頁
+*/
 .index--portfolio--title {
   letter-spacing: 0.2em;
   margin: 16px -100px;
@@ -115,24 +168,6 @@ main {
     display: block;
     background-color: $main-text-1;
   }
-}
-.portfolio--card {
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 40px;
-  letter-spacing: 0.2em;
-}
-.portfolio--card:hover::after {
-  position: absolute;
-  content: "";
-  z-index: 2;
-  right: 15px;
-  top: 15px;
-  height: 300px;
-  width: 300px;
-  display: block;
-  border: 1px solid white;
-  border-radius: 8px;
 }
 .index--wrap {
   padding-bottom: 60px;
@@ -228,35 +263,14 @@ main {
   background-size: cover;
   opacity: 90%;
 }
+
+/*
+  關於我們
+*/
 .about--wrap {
   background-image: url("../images/pattern02.png");
   background-repeat: no-repeat;
   background-position: left 30% bottom;
-  &--bg {
-    z-index: -1;
-    background-image: url("../images/about/向量圖智慧型物件.png");
-    background-repeat: no-repeat;
-    width: 500px;
-    height: 540px;
-    position: absolute;
-  }
-}
-.news--wrap {
-  background-image: url("../images/pattern02.png");
-  background-repeat: no-repeat;
-  background-position: left 30% bottom 160px;
-  &--bg {
-    z-index: -1;
-    background-image: url("../images/about/向量圖智慧型物件.png");
-    background-repeat: no-repeat;
-    width: 500px;
-    height: 540px;
-    position: absolute;
-  }
-}
-.reserve--wrap,
-.price--wrap,
-.portfolio--wrap {
   &--bg {
     z-index: -1;
     background-image: url("../images/about/向量圖智慧型物件.png");
@@ -276,46 +290,42 @@ main {
 .about--contact--list {
   color: $main-text-1;
 }
-.reserve--list {
-  line-height: 1.6;
-  dt {
-    padding: 0 0 0 36px;
-    position: relative;
-  }
-  dt::before {
-    content: "";
-    z-index: 2;
-    position: absolute;
-    left: 0px;
-    bottom: 10px;
-    height: 1px;
-    width: 30px;
-    display: block;
-    background-color: $main-text-2;
-  }
-  dd {
-    margin-bottom: 20px;
-  }
+
+/*
+  紋繡作品
+*/
+.portfolio--card {
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 0.2em;
 }
-.qa,
-.news {
-  &--title {
-    display: inline-block;
-    color: white;
-    border-radius: 0px 16px 16px 16px;
-    background-color: $main-bg-3;
-    padding: 6px 20px;
-    margin-bottom: 12px;
-  }
-  &--contain {
-    width: 100%;
-  }
-  &--card:hover {
-    background-image: url("../images/news/147.png");
-    background-size: 100%;
+.portfolio--card:hover::after {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  right: 15px;
+  top: 15px;
+  height: 300px;
+  width: 300px;
+  display: block;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+.portfolio--wrap {
+  &--bg {
+    z-index: -1;
+    background-image: url("../images/about/向量圖智慧型物件.png");
     background-repeat: no-repeat;
+    width: 500px;
+    height: 540px;
+    position: absolute;
   }
 }
+
+/*
+  服務價格
+*/
 .price {
   &--title {
     display: inline-block;
@@ -345,30 +355,81 @@ main {
   }
 }
 
-.footer {
-  background-image: url("../images/footer/footerBg.png");
-  background-position-y: -160px;
-  background-repeat: repeat-x;
-  color: $main-text-1;
-  &--inner {
-    position: relative;
-  }
-  &--item {
-    a {
-      letter-spacing: 0.16em;
-    }
-  }
-  &--icons {
+/*
+  專業文章
+*/
+.news--wrap {
+  background-image: url("../images/pattern02.png");
+  background-repeat: no-repeat;
+  background-position: left 30% bottom 160px;
+  &--bg {
+    z-index: -1;
+    background-image: url("../images/about/向量圖智慧型物件.png");
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 540px;
     position: absolute;
-    right: 0;
-    top: 30%;
-  }
-  &--end {
-    font-family: $font-family-1;
-    color: white;
-    background-color: $main-bg-2;
   }
 }
+
+/*
+  預約與須知 
+*/
+.reserve--list {
+  line-height: 1.6;
+  dt {
+    padding: 0 0 0 36px;
+    position: relative;
+  }
+  dt::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    height: 1px;
+    width: 30px;
+    display: block;
+    background-color: $main-text-2;
+  }
+  dd {
+    margin-bottom: 20px;
+  }
+}
+
+/*
+  預約與須知  服務價格
+*/
+.reserve--wrap,
+.price--wrap,
+
+
+/*
+  常見問題 專業文章
+*/
+.qa,
+.news {
+  &--title {
+    display: inline-block;
+    color: white;
+    border-radius: 0px 16px 16px 16px;
+    background-color: $main-bg-3;
+    padding: 6px 20px;
+    margin-bottom: 12px;
+  }
+  &--contain {
+    width: 100%;
+  }
+  &--card:hover {
+    background-image: url("../images/news/147.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+/*
+  RWD
+*/
 @media (max-width: 1280px) {
   .index--wrap {
     background: url("../images/index/portfolioRight\(white\).jpg") right bottom
@@ -391,6 +452,11 @@ main {
       display: none;
     }
   }
+  .price {
+    &--title {
+      margin-left: 4px;
+    }
+  }
   .portfolio--card:hover::after {
     display: none;
   }
@@ -408,7 +474,9 @@ main {
   }
 }
 
-// swiper-config
+/*
+  輪播設定 swiper-config
+*/
 .swiper {
   height: 87vh;
   .swiper-slide {
@@ -433,23 +501,4 @@ main {
       background-image: url("../images/手機大圖輪播02.jpg");
     }
   }
-}
-
-.nyz-text-light {
-  color: $main-text-2;
-  font-weight: normal;
-}
-.nyz-text-dark {
-  color: $main-text-1;
-}
-.nyz-ff-normal {
-  font-family: $font-family-2;
-}
-.nyz-ff-didot {
-  font-family: $font-family-3;
-}
-.horizon {
-  height: 1px;
-  margin: 40px 0;
-  background-color: $main-text-2;
 }
