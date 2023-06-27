@@ -312,7 +312,7 @@ main {
   border: 1px solid white;
   border-radius: 8px;
 }
-.portfolio--wrap {
+.portfolio--wrap, .price--wrap, .reserve--wrap {
   &--bg {
     z-index: -1;
     background-image: url("../images/about/向量圖智慧型物件.png");
