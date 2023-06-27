@@ -143,6 +143,19 @@ main {
   font-size: 40px;
 }
 
+.accordion {
+  width: 156px;
+}
+.accordion--menu {
+  font-weight: bold;
+  text-align: center;
+}
+.accordion--title {
+  color: #cbb4a1;
+  font-family: "GFS Didot", serif;
+  font-size: 40px;
+}
+
 .breadcrumb {
   font-family: "GFS Didot", serif;
   font-size: larger;
@@ -358,13 +371,24 @@ main {
   margin-bottom: 20px;
 }
 
-.qa--title {
+.qa--title,
+.news--title {
   display: inline-block;
   color: white;
   border-radius: 0px 16px 16px 16px;
   background-color: #ad9483;
   padding: 6px 20px;
   margin-bottom: 12px;
+}
+.qa--contain,
+.news--contain {
+  width: 100%;
+}
+.qa--card:hover,
+.news--card:hover {
+  background-image: url("../images/news/147.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .price--title {
@@ -483,6 +507,10 @@ main {
 
 .nyz-ff-normal {
   font-family: "Noto Serif TC", serif;
+}
+
+.nyz-ff-didot {
+  font-family: "GFS Didot", serif;
 }
 
 .horizon {
