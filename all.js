@@ -1,14 +1,14 @@
 $(document).ready(function () {
   $(".nav--item").hover(function (e) {
     var detail = $(this).find(".nav--item--detail");
-    detail.show("slow");
+    detail.show();
     $(this).siblings().find(".nav--item--detail").hide();
     $(this).siblings().find(".nav--item--detail--double").hide();
   });
 
   $(".nav--item--double").hover(function (e) {
     var detail = $(this).find(".nav--item--detail--double");
-    detail.show("slow");
+    detail.show();
     $(this).siblings().find(".nav--item--detail").hide();
     $(this).siblings().find(".nav--item--detail--double").hide();
   });
