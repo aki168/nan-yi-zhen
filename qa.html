@@ -540,26 +540,29 @@
           <aside class="sider">
             <h3 class="sider--title p-4 md:pt-0 nyz-ff-didot">Q&A</h3>
             <ul
-              class="sider--menu flex-wrap flex gap-3 md:block md:w-[100px] py-3 text-start"
+              class="sider--menu flex-wrap flex gap-3 md:block md:w-[100px] py-3 text-start qa-nav"
             >
-              <li
-                class="border-solid border-b border-b-yellow-800/50 text-yellow-800 mb-2 py-1 ps-2"
+              <li id="qa-nav-1"
+                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 border-b-yellow-800/50 text-yellow-800"
               >
-                <a href="qa.html">眉 毛</a>
+                <button>眉 毛</button>
               </li>
-              <li
+              <li id="qa-nav-2"
                 class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
               >
-                <a class="nav--item--link" href="qa.html">眼 線</a>
+                <button class="nav--item--link">眼 線</button>
               </li>
-              <li
+              <li id="qa-nav-3"
                 class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
               >
-                <a class="nav--item--link" href="qa.html">嘴 唇</a>
+                <button class="nav--item--link">嘴 唇</button>
               </li>
             </ul>
           </aside>
-          <div class="qa--contain md:px-20 md:py-20">
+
+          <main class="qa-pane">
+
+          <div class="qa--contain md:px-20 md:py-20 qa-nav-1">
             <h2 class="qa--contain--title text-xl font-bold mb-4">眉毛</h2>
 
             <details class="min-w-3/4 py-2" open>
@@ -660,6 +663,17 @@
               </p>
             </details>
           </div>
+
+          <div class="qa--contain md:px-20 md:py-20 qa-nav-2">
+            <h2 class="qa--contain--title text-xl font-bold mb-4">眼線</h2>
+          </div>
+
+          <div class="qa--contain md:px-20 md:py-20 qa-nav-3">
+            <h2 class="qa--contain--title text-xl font-bold mb-4">嘴唇</h2>
+          </div>
+        
+        </main>
+
         </div>
       </main>
       <!-- contain end -->
