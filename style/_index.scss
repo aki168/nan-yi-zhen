@@ -462,7 +462,10 @@ main {
   }
   .footer {
     background-position: 0;
-    padding-bottom: 20px;
+    
+  }
+  .footer > div {
+    padding-bottom: 10px;
   }
   .index--portfolio--title {
     margin: 16px 0px;

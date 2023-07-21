@@ -537,80 +537,101 @@
         </div>
 
         <div class="sider--and--contain px-4 md:flex">
-          <aside class="sider">
+          <aside class="sider mb-3">
             <h3 class="accordion--title">news</h3>
             <div
-              class="accordion--menu flex-wrap flex gap-3 md:block md:w-[120px] py-3 text-start"
+              class="accordion--menu flex md:gap-3 md:block md:w-[120px] pt-3 text-start news-nav overflow-x-scroll"
             >
-            <details class="mb-2 px-2" open>
-              <summary class="flex justify-between items-center cursor-pointer list-none border-solid border-b border-b-yellow-800/50 text-yellow-800 mb-2 py-1 px-2" open>
-                <a href="news.html">眉 毛</a>
-                <i class="fa-solid fa-angle-up"></i>
-              </summary>
-              <ul class="mb-10 leading-7">
-                <li
-                class="border-solid border-b border-b-white/0  hover:text-yellow-800 mb-2 ps-2"
-              >
-                <a class="nav--item--link" href="news.html">霧眉</a>
-              </li>
-              <li
-              class="border-solid border-b border-b-white/0  hover:text-yellow-800 mb-2 ps-2"
-            >
-              <a class="nav--item--link" href="news.html">飄眉</a>
-            </li>
-            <li
-            class="border-solid border-b border-b-white/0  hover:text-yellow-800 mb-2 ps-2"
-          >
-            <a class="nav--item--link" href="news.html">飄霧眉</a>
-          </li>
-          <li
-          class="border-solid border-b border-b-white/0  hover:text-yellow-800 mb-2 ps-2"
-        >
-          <a class="nav--item--link" href="news.html">男士眉</a>
-        </li>
-        <li
-        class="border-solid border-b border-b-white/0  hover:text-yellow-800 mb-2 ps-2"
-      >
-        <a class="nav--item--link" href="news.html">改眉</a>
-      </li>
-              </ul>
-            </details>
-            <details class="mb-2 px-2">
-              <summary class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2" open>
-                <a href="news.html">眼 線</a>
-                <i class="fa-solid fa-angle-down"></i>
-              </summary>
-            </details>
-            <details class="mb-2 px-2">
-              <summary class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2" open>
-                <a href="news.html">嘴 唇</a>
-                <i class="fa-solid fa-angle-down"></i>
-              </summary>
-            </details>
-            <details class="mb-2 px-2">
-              <summary class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2" open>
-                <a href="news.html">髮際線</a>
-                <i class="fa-solid fa-angle-down"></i>
-              </summary>
-            </details>
-            <details class="mb-2 px-2">
-              <summary class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2" open>
-                <a href="news.html">乳 暈</a>
-                <i class="fa-solid fa-angle-down"></i>
-              </summary>
-            </details>
-            <details class="mb-2 px-2">
-              <summary class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2" open>
-                <a href="news.html">除 色</a>
-                <i class="fa-solid fa-angle-down"></i>
-              </summary>
-            </details>
-            <details class="mb-2 px-2" open>
-              <summary class="flex justify-between items-center cursor-pointer list-none border-solid border-b border-b-yellow-800/50 text-yellow-800 mb-2 py-1 px-2" open>
-                <a href="news.html">2023</a>
-                <i class="fa-solid fa-angle-down"></i>
-              </summary>
-            </details>
+              <details class="mb-2 px-2 min-w-[100px]" id="news-nav-1">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2"
+                >
+                  <button>眉 毛</button>
+                  <i class="news-nav-btn fa-solid fa-angle-down"></i>
+                </summary>
+                <ul class="mb-10 leading-7">
+                  <li
+                    class="border-solid border-b border-b-white/0 hover:text-yellow-800 mb-2 ps-2"
+                  >
+                    <button class="nav--item--link">霧眉</button>
+                  </li>
+                  <li
+                    class="border-solid border-b border-b-white/0 hover:text-yellow-800 mb-2 ps-2"
+                  >
+                    <button class="nav--item--link">飄眉</button>
+                  </li>
+                  <li
+                    class="border-solid border-b border-b-white/0 hover:text-yellow-800 mb-2 ps-2"
+                  >
+                    <button class="nav--item--link">飄霧眉</button>
+                  </li>
+                  <li
+                    class="border-solid border-b border-b-white/0 hover:text-yellow-800 mb-2 ps-2"
+                  >
+                    <button class="nav--item--link">男士眉</button>
+                  </li>
+                  <li
+                    class="border-solid border-b border-b-white/0 hover:text-yellow-800 mb-2 ps-2"
+                  >
+                    <button class="nav--item--link">改眉</button>
+                  </li>
+                </ul>
+              </details>
+              <details class="mb-2 px-2 min-w-[100px]" id="news-nav-2">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2"
+                  open
+                >
+                  <button>眼 線</button>
+                  <i class="news-nav-btn fa-solid fa-angle-down"></i>
+                </summary>
+              </details>
+              <details class="mb-2 px-2 min-w-[100px]" id="news-nav-3">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2"
+                  open
+                >
+                  <button>嘴 唇</button>
+                  <i class="news-nav-btn fa-solid fa-angle-down"></i>
+                </summary>
+              </details>
+              <details class="mb-2 px-2 min-w-[100px]" id="news-nav-4">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2"
+                  open
+                >
+                  <button>髮際線</button>
+                  <i class="news-nav-btn fa-solid fa-angle-down"></i>
+                </summary>
+              </details>
+              <details class="mb-2 px-2 min-w-[100px]" id="news-nav-5">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2"
+                  open
+                >
+                  <button>乳 暈</button>
+                  <i class="news-nav-btn fa-solid fa-angle-down"></i>
+                </summary>
+              </details>
+              <details class="mb-2 px-2 min-w-[100px]" id="news-nav-6">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2"
+                  open
+                >
+                  <button>除 色</button>
+                  <i class="news-nav-btn fa-solid fa-angle-down"></i>
+                </summary>
+              </details>
+              <details class="mb-2 px-2 min-w-[100px]" id="news-nav-7">
+                <summary
+                  class="flex justify-between items-center cursor-pointer list-none text-yellow-800 mb-2 py-1 px-2"
+                  open
+                >
+                  <button>2023</button>
+                  <i class="news-nav-btn fa-solid fa-angle-down"></i>
+                </summary>
+              </details>
+            </div>
           </aside>
 
           <div class="news--contain md:px-20 md:py-16">

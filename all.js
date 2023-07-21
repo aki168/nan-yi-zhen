@@ -131,8 +131,8 @@ $(document).ready(function () {
     if (e.currentTarget.tagName === "DETAILS") {
       $(this).siblings().find(".news-nav-btn").removeClass("fa-angle-up");
       $(this).find(".news-nav-btn").toggleClass("fa-angle-up");
-      $(this).siblings().attr("open", false);
-      $(this).attr("open", true);
+      // $(this).siblings().attr("open", false);
+      // $(this).attr("open", true);
     }
 
     let currentId = e.currentTarget.id;
