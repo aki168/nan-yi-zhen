@@ -102,6 +102,23 @@ $(document).ready(function () {
     }
   });
 
+  $(".class-nav li").click(function (e) {
+    $(this).addClass("border-b-yellow-800/50 text-yellow-800");
+    $(this).siblings().removeClass("border-b-yellow-800/50 text-yellow-800");
+    let currentId = e.currentTarget.id;
+    let panes = $(".class-pane").children();
+    if (panes) {
+      for (i = 0; i < panes.length; i++) {
+        if (panes[i].classList.contains(currentId)) {
+          panes[i].classList.remove("hidden");
+          panes[i].classList.add("block");
+        } else {
+          panes[i].classList.add("hidden");
+        }
+      }
+    }
+  });
+
   $(".news-nav details").click(function (e) {
     $(this)
       .find("summary")
