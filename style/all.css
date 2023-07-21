@@ -549,6 +549,9 @@ main {
   .about--contain {
     width: 100%;
   }
+  .news-nav-btn {
+    display: none;
+  }
 }
 /*
   輪播設定 swiper-config
