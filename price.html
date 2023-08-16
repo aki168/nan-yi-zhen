@@ -13,109 +13,128 @@
     <title>南以真 | Nan Yi Zhen</title>
   </head>
   <body>
-    <div class="price--wrap">
-      <div class="price--wrap--bg"></div>
-      <div id="header-placeholder"></div>
+    <div class="loading" id="loading">
+      <svg
+        aria-hidden="true"
+        class="inline w-10 h-10 mr-2 text-gray-200 animate-spin dark:text-gray-200 fill-amber-50"
+        viewBox="0 0 100 101"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+          fill="currentColor"
+        />
+        <path
+          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+          fill="currentFill"
+        />
+      </svg>
+      Loading...
+    </div>
+    <div id="content">
+      <div class="price--wrap">
+        <div class="price--wrap--bg"></div>
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("../components/Header.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("header-placeholder").innerHTML = data;
+            });
+        </script>
+        <!------ contain start  ------>
+        <main class="nyz-container md:p-20">
+          <div class="breadcrumb mb-16 hidden md:flex">
+            <div class="px-3 pt-1">
+              <img src="./images/about/icon.png" alt="about" />
+            </div>
+            <span> / price </span>
+          </div>
+
+          <div class="sider--and--contain px-4 md:flex">
+            <aside class="sider">
+              <h3 class="sider--title">price</h3>
+              <ul
+                class="sider--menu flex-wrap flex gap-3 md:block md:w-[100px] py-3"
+              >
+                <li
+                  class="border-solid border-b border-b-yellow-800/50 text-yellow-800 mb-2 py-1"
+                >
+                  <a href="price.html">服務價格</a>
+                </li>
+              </ul>
+            </aside>
+            <div class="price--contain md:px-20 md:py-20">
+              <h3 class="price--title">項目 | 價格</h3>
+              <dl class="price--list">
+                <dt>｜ 眉毛 ｜</dt>
+                <dd>飄眉 / 9,000</dd>
+                <dd>霧眉 / 9,000</dd>
+                <dd>男士眉 / 9,000</dd>
+                <dd>隱形眼線 / 6,000</dd>
+              </dl>
+              <dl class="price--list">
+                <dt>｜ 眼線 ｜</dt>
+                <dd>隱形眼線 / 6,000</dd>
+                <dd>妝感眼線 / 7,000</dd>
+                <dd>魅惑眼線 / 8,000</dd>
+              </dl>
+              <dl class="price--list">
+                <dt>｜ 嘴唇 ｜</dt>
+                <dd>無框水透唇 / 12,000</dd>
+              </dl>
+              <dl class="price--list">
+                <dd>前額仿真漸層髮際線 / 約18,000~30,000</dd>
+                <dd>頭頂濃密髮際線 / 約16,000~28,000</dd>
+                <dd class="text-sm">*可預約現場諮詢，或@LINE照片線上報價</dd>
+                <dd class="text-sm">
+                  *依範圍分區報價，可依預算選擇，另有包套優惠
+                </dd>
+              </dl>
+              <dl class="price--list">
+                <dt>｜ 粉嫩乳暈 ｜</dt>
+                <dd>女 一對 / 約24,000~30,000</dd>
+                <dd>男 一對 / 約20,000~26,000</dd>
+                <dd class="text-sm">*可預約現場諮詢，或@LINE照片線上報價</dd>
+                <ul class="price--list--block">
+                  <li>*以上價格包含2次施作 (初次 + 贈送三個月內補色)</li>
+                  <li>*附貼心術後護理包</li>
+                </ul>
+              </dl>
+              <dl class="price--list">
+                <dt>｜ 除色 ｜</dt>
+                <dd>眉毛 / 初次4,000，後續2,000次</dd>
+                <dd class="text-sm">*其他部位依範圍狀況報價</dd>
+              </dl>
+              <div class="horizon"></div>
+              <h3 class="price--title">兩項以上95折</h3>
+              <dl class="price--list">
+                <dd>一起預定兩個項目以上，可同時享95折</dd>
+                <dd>可先付定金2000元/一項，半年內使用完畢即可</dd>
+              </dl>
+              <div class="horizon"></div>
+              <h3 class="price--title">回訪補色</h3>
+              <dl class="price--list">
+                <dd>一年內5折(單次)</dd>
+                <dd>兩年內8折(含補色)</dd>
+                <dd>兩年以上終生9折(含補色)</dd>
+                <dd class="text-sm">*限之前於本店施作過的舊項目</dd>
+              </dl>
+            </div>
+          </div>
+        </main>
+        <!------ contain end ------>
+      </div>
+      <div id="footer-placeholder"></div>
       <script>
-        fetch("../components/Header.html")
+        fetch("../components/Footer.html")
           .then((response) => response.text())
           .then((data) => {
-            document.getElementById("header-placeholder").innerHTML = data;
+            document.getElementById("footer-placeholder").innerHTML = data;
           });
       </script>
-      <!------ contain start  ------>
-      <main class="nyz-container md:p-20">
-        <div class="breadcrumb mb-16 hidden md:flex">
-          <div class="px-3 pt-1">
-            <img src="./images/about/icon.png" alt="about" />
-          </div>
-          <span> / price </span>
-        </div>
-
-        <div class="sider--and--contain px-4 md:flex">
-          <aside class="sider">
-            <h3 class="sider--title">price</h3>
-            <ul
-              class="sider--menu flex-wrap flex gap-3 md:block md:w-[100px] py-3"
-            >
-              <li
-                class="border-solid border-b border-b-yellow-800/50 text-yellow-800 mb-2 py-1"
-              >
-                <a href="price.html">服務價格</a>
-              </li>
-            </ul>
-          </aside>
-          <div class="price--contain md:px-20 md:py-20">
-            <h3 class="price--title">項目 | 價格</h3>
-            <dl class="price--list">
-              <dt>｜ 眉毛 ｜</dt>
-              <dd>飄眉 / 9,000</dd>
-              <dd>霧眉 / 9,000</dd>
-              <dd>男士眉 / 9,000</dd>
-              <dd>隱形眼線 / 6,000</dd>
-            </dl>
-            <dl class="price--list">
-              <dt>｜ 眼線 ｜</dt>
-              <dd>隱形眼線 / 6,000</dd>
-              <dd>妝感眼線 / 7,000</dd>
-              <dd>魅惑眼線 / 8,000</dd>
-            </dl>
-            <dl class="price--list">
-              <dt>｜ 嘴唇 ｜</dt>
-              <dd>無框水透唇 / 12,000</dd>
-            </dl>
-            <dl class="price--list">
-              <dd>前額仿真漸層髮際線 / 約18,000~30,000</dd>
-              <dd>頭頂濃密髮際線 / 約16,000~28,000</dd>
-              <dd class="text-sm">*可預約現場諮詢，或@LINE照片線上報價</dd>
-              <dd class="text-sm">
-                *依範圍分區報價，可依預算選擇，另有包套優惠
-              </dd>
-            </dl>
-            <dl class="price--list">
-              <dt>｜ 粉嫩乳暈 ｜</dt>
-              <dd>女 一對 / 約24,000~30,000</dd>
-              <dd>男 一對 / 約20,000~26,000</dd>
-              <dd class="text-sm">*可預約現場諮詢，或@LINE照片線上報價</dd>
-              <ul class="price--list--block">
-                <li>*以上價格包含2次施作 (初次 + 贈送三個月內補色) </li>
-                <li>*附貼心術後護理包</li>
-              </ul>
-            </dl>
-            <dl class="price--list">
-              <dt>｜ 除色 ｜</dt>
-              <dd>眉毛 / 初次4,000，後續2,000次</dd>
-              <dd class="text-sm">*其他部位依範圍狀況報價</dd>
-            </dl>
-            <div class="horizon"></div>
-            <h3 class="price--title">兩項以上95折</h3>
-            <dl class="price--list">
-              <dd>一起預定兩個項目以上，可同時享95折 </dd>
-              <dd>可先付定金2000元/一項，半年內使用完畢即可</dd>
-            </dl>
-            <div class="horizon"></div>
-            <h3 class="price--title">回訪補色</h3>
-            <dl class="price--list">
-              <dd>一年內5折(單次)  </dd>
-              <dd>兩年內8折(含補色)</dd>
-              <dd>兩年以上終生9折(含補色)</dd>
-              <dd class="text-sm">
-                *限之前於本店施作過的舊項目
-              </dd>
-            </dl>
-          </div>
-        </div>
-      </main>
-      <!------ contain end ------> 
     </div>
-    <div id="footer-placeholder"></div>
-    <script>
-      fetch("../components/Footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    </script>
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="

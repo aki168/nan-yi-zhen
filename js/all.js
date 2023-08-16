@@ -150,6 +150,15 @@ $(document).ready(function () {
   });
 });
 
+window.onload = function() {
+  const loading = document.getElementById('loading');
+  const content = document.getElementById('content');
+  setTimeout(()=>{
+    loading.style.display = 'none';
+    content.style.display = 'block';
+  }, 1000)
+};
+
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,

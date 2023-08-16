@@ -13,320 +13,341 @@
     <title>南以真 | Nan Yi Zhen</title>
   </head>
   <body>
-    <div class="reserve--wrap">
-      <div class="reserve--wrap--bg"></div>
-      <div id="header-placeholder"></div>
+    <div class="loading" id="loading">
+      <svg
+        aria-hidden="true"
+        class="inline w-10 h-10 mr-2 text-gray-200 animate-spin dark:text-gray-200 fill-amber-50"
+        viewBox="0 0 100 101"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+          fill="currentColor"
+        />
+        <path
+          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+          fill="currentFill"
+        />
+      </svg>
+      Loading...
+    </div>
+    <div id="content">
+      <div class="reserve--wrap">
+        <div class="reserve--wrap--bg"></div>
+        <div id="header-placeholder"></div>
+        <script>
+          fetch("../components/Header.html")
+            .then((response) => response.text())
+            .then((data) => {
+              document.getElementById("header-placeholder").innerHTML = data;
+            });
+        </script>
+        <!------ contain start  ------>
+        <main class="nyz-container md:p-20">
+          <div class="breadcrumb mb-16 hidden md:flex">
+            <div class="px-3 pt-1">
+              <img src="./images/about/icon.png" alt="about" />
+            </div>
+            <span> / class </span>
+          </div>
+
+          <div class="sider--and--contain px-4 md:flex">
+            <aside class="sider">
+              <h3 class="sider--title">class</h3>
+              <ul
+                class="sider--menu text-left flex-wrap flex gap-3 md:block md:w-[152px] py-3 class-nav"
+              >
+                <li
+                  id="class-nav-1"
+                  class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2 border-b-yellow-800/50 text-yellow-800"
+                >
+                  <button>開課時間</button>
+                </li>
+                <li
+                  id="class-nav-2"
+                  class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
+                >
+                  <button>髮際線專班</button>
+                </li>
+                <li
+                  id="class-nav-3"
+                  class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
+                >
+                  <button>眉眼唇全科班</button>
+                </li>
+                <li
+                  id="class-nav-4"
+                  class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
+                >
+                  <button>眉毛專班</button>
+                </li>
+                <li
+                  id="class-nav-5"
+                  class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
+                >
+                  <button>眼線專班</button>
+                </li>
+                <li
+                  id="class-nav-6"
+                  class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
+                >
+                  <button>水透唇專班</button>
+                </li>
+                <li
+                  id="class-nav-7"
+                  class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
+                >
+                  <button>學員成功實例分享</button>
+                </li>
+              </ul>
+            </aside>
+
+            <maim class="class-pane">
+              <div class="md:px-20 class-nav-1">
+                <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
+                  開課時間
+                </h2>
+                <p class="mb-4">除了手術植髮您還有更好的選擇</p>
+                <div
+                  class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
+                >
+                  <ul class="flex flex-col gap-2 class--list">
+                    <li class="class--list--item">・只需要手術的20%的費用</li>
+                    <li class="class--list--item">
+                      ・無感修復，親友只會覺得你的髮量瞬間暴增
+                    </li>
+                    <li class="class--list--item">・過程無痛</li>
+                    <li class="class--list--item">・沒有麻醉風險</li>
+                    <li class="class--list--item">
+                      ・無需等待毛髮生長期，直接濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・沒有所謂的存活率，我們是100%濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・不需開刀，過程非常輕鬆，快速美麗、帥氣
+                    </li>
+                  </ul>
+                  <img src="./images/class/class-main.png" alt="class-main" />
+                </div>
+                <img
+                  src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
+                  alt="class"
+                />
+              </div>
+
+              <div class="md:px-20 class-nav-2 hidden">
+                <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
+                  髮際線專班
+                </h2>
+                <p class="mb-4">除了手術植髮您還有更好的選擇</p>
+                <div
+                  class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
+                >
+                  <ul class="flex flex-col gap-2 class--list">
+                    <li class="class--list--item">・只需要手術的20%的費用</li>
+                    <li class="class--list--item">
+                      ・無感修復，親友只會覺得你的髮量瞬間暴增
+                    </li>
+                    <li class="class--list--item">・過程無痛</li>
+                    <li class="class--list--item">・沒有麻醉風險</li>
+                    <li class="class--list--item">
+                      ・無需等待毛髮生長期，直接濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・沒有所謂的存活率，我們是100%濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・不需開刀，過程非常輕鬆，快速美麗、帥氣
+                    </li>
+                  </ul>
+                  <img src="./images/class/class-main.png" alt="class-main" />
+                </div>
+                <img
+                  src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
+                  alt="class"
+                />
+              </div>
+
+              <div class="md:px-20 class-nav-3 hidden">
+                <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
+                  眉眼唇全科班
+                </h2>
+                <p class="mb-4">除了手術植髮您還有更好的選擇</p>
+                <div
+                  class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
+                >
+                  <ul class="flex flex-col gap-2 class--list">
+                    <li class="class--list--item">・只需要手術的20%的費用</li>
+                    <li class="class--list--item">
+                      ・無感修復，親友只會覺得你的髮量瞬間暴增
+                    </li>
+                    <li class="class--list--item">・過程無痛</li>
+                    <li class="class--list--item">・沒有麻醉風險</li>
+                    <li class="class--list--item">
+                      ・無需等待毛髮生長期，直接濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・沒有所謂的存活率，我們是100%濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・不需開刀，過程非常輕鬆，快速美麗、帥氣
+                    </li>
+                  </ul>
+                  <img src="./images/class/class-main.png" alt="class-main" />
+                </div>
+                <img
+                  src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
+                  alt="class"
+                />
+              </div>
+
+              <div class="md:px-20 class-nav-4 hidden">
+                <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
+                  眉毛專班
+                </h2>
+                <p class="mb-4">除了手術植髮您還有更好的選擇</p>
+                <div
+                  class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
+                >
+                  <ul class="flex flex-col gap-2 class--list">
+                    <li class="class--list--item">・只需要手術的20%的費用</li>
+                    <li class="class--list--item">
+                      ・無感修復，親友只會覺得你的髮量瞬間暴增
+                    </li>
+                    <li class="class--list--item">・過程無痛</li>
+                    <li class="class--list--item">・沒有麻醉風險</li>
+                    <li class="class--list--item">
+                      ・無需等待毛髮生長期，直接濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・沒有所謂的存活率，我們是100%濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・不需開刀，過程非常輕鬆，快速美麗、帥氣
+                    </li>
+                  </ul>
+                  <img src="./images/class/class-main.png" alt="class-main" />
+                </div>
+                <img
+                  src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
+                  alt="class"
+                />
+              </div>
+
+              <div class="md:px-20 class-nav-5 hidden">
+                <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
+                  眼線專班
+                </h2>
+                <p class="mb-4">除了手術植髮您還有更好的選擇</p>
+                <div
+                  class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
+                >
+                  <ul class="flex flex-col gap-2 class--list">
+                    <li class="class--list--item">・只需要手術的20%的費用</li>
+                    <li class="class--list--item">
+                      ・無感修復，親友只會覺得你的髮量瞬間暴增
+                    </li>
+                    <li class="class--list--item">・過程無痛</li>
+                    <li class="class--list--item">・沒有麻醉風險</li>
+                    <li class="class--list--item">
+                      ・無需等待毛髮生長期，直接濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・沒有所謂的存活率，我們是100%濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・不需開刀，過程非常輕鬆，快速美麗、帥氣
+                    </li>
+                  </ul>
+                  <img src="./images/class/class-main.png" alt="class-main" />
+                </div>
+                <img
+                  src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
+                  alt="class"
+                />
+              </div>
+
+              <div class="md:px-20 class-nav-6 hidden">
+                <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
+                  水透唇專班
+                </h2>
+                <p class="mb-4">除了手術植髮您還有更好的選擇</p>
+                <div
+                  class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
+                >
+                  <ul class="flex flex-col gap-2 class--list">
+                    <li class="class--list--item">・只需要手術的20%的費用</li>
+                    <li class="class--list--item">
+                      ・無感修復，親友只會覺得你的髮量瞬間暴增
+                    </li>
+                    <li class="class--list--item">・過程無痛</li>
+                    <li class="class--list--item">・沒有麻醉風險</li>
+                    <li class="class--list--item">
+                      ・無需等待毛髮生長期，直接濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・沒有所謂的存活率，我們是100%濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・不需開刀，過程非常輕鬆，快速美麗、帥氣
+                    </li>
+                  </ul>
+                  <img src="./images/class/class-main.png" alt="class-main" />
+                </div>
+                <img
+                  src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
+                  alt="class"
+                />
+              </div>
+
+              <div class="md:px-20 class-nav-7 hidden">
+                <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
+                  學員成功實例分享
+                </h2>
+                <p class="mb-4">除了手術植髮您還有更好的選擇</p>
+                <div
+                  class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
+                >
+                  <ul class="flex flex-col gap-2 class--list">
+                    <li class="class--list--item">・只需要手術的20%的費用</li>
+                    <li class="class--list--item">
+                      ・無感修復，親友只會覺得你的髮量瞬間暴增
+                    </li>
+                    <li class="class--list--item">・過程無痛</li>
+                    <li class="class--list--item">・沒有麻醉風險</li>
+                    <li class="class--list--item">
+                      ・無需等待毛髮生長期，直接濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・沒有所謂的存活率，我們是100%濃密
+                    </li>
+                    <li class="class--list--item">
+                      ・不需開刀，過程非常輕鬆，快速美麗、帥氣
+                    </li>
+                  </ul>
+                  <img src="./images/class/class-main.png" alt="class-main" />
+                </div>
+                <img
+                  src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
+                  alt="class"
+                />
+              </div>
+            </maim>
+          </div>
+        </main>
+        <!------ contain end ------>
+      </div>
+      <div id="footer-placeholder"></div>
       <script>
-        fetch("../components/Header.html")
+        fetch("../components/Footer.html")
           .then((response) => response.text())
           .then((data) => {
-            document.getElementById("header-placeholder").innerHTML = data;
+            document.getElementById("footer-placeholder").innerHTML = data;
           });
       </script>
-      <!------ contain start  ------>
-      <main class="nyz-container md:p-20">
-        <div class="breadcrumb mb-16 hidden md:flex">
-          <div class="px-3 pt-1">
-            <img src="./images/about/icon.png" alt="about" />
-          </div>
-          <span> / class </span>
-        </div>
-
-        <div class="sider--and--contain px-4 md:flex">
-          <aside class="sider">
-            <h3 class="sider--title">class</h3>
-            <ul
-              class="sider--menu text-left flex-wrap flex gap-3 md:block md:w-[152px] py-3 class-nav"
-            >
-              <li
-                id="class-nav-1"
-                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2 border-b-yellow-800/50 text-yellow-800"
-              >
-                <button>開課時間</button>
-              </li>
-              <li
-                id="class-nav-2"
-                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
-              >
-                <button>髮際線專班</button>
-              </li>
-              <li
-                id="class-nav-3"
-                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
-              >
-                <button>眉眼唇全科班</button>
-              </li>
-              <li
-                id="class-nav-4"
-                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
-              >
-                <button>眉毛專班</button>
-              </li>
-              <li
-                id="class-nav-5"
-                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
-              >
-                <button>眼線專班</button>
-              </li>
-              <li
-                id="class-nav-6"
-                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
-              >
-                <button>水透唇專班</button>
-              </li>
-              <li
-                id="class-nav-7"
-                class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-yellow-800 mb-2 py-1 ps-2"
-              >
-                <button>學員成功實例分享</button>
-              </li>
-            </ul>
-          </aside>
-
-          <maim class="class-pane">
-            <div class="md:px-20 class-nav-1">
-              <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
-                開課時間
-              </h2>
-              <p class="mb-4">除了手術植髮您還有更好的選擇</p>
-              <div
-                class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
-              >
-                <ul class="flex flex-col gap-2 class--list">
-                  <li class="class--list--item">・只需要手術的20%的費用</li>
-                  <li class="class--list--item">
-                    ・無感修復，親友只會覺得你的髮量瞬間暴增
-                  </li>
-                  <li class="class--list--item">・過程無痛</li>
-                  <li class="class--list--item">・沒有麻醉風險</li>
-                  <li class="class--list--item">
-                    ・無需等待毛髮生長期，直接濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・沒有所謂的存活率，我們是100%濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・不需開刀，過程非常輕鬆，快速美麗、帥氣
-                  </li>
-                </ul>
-                <img src="./images/class/class-main.png" alt="class-main" />
-              </div>
-              <img
-                src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
-                alt="class"
-              />
-            </div>
-
-            <div class="md:px-20 class-nav-2 hidden">
-              <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
-                髮際線專班
-              </h2>
-              <p class="mb-4">除了手術植髮您還有更好的選擇</p>
-              <div
-                class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
-              >
-                <ul class="flex flex-col gap-2 class--list">
-                  <li class="class--list--item">・只需要手術的20%的費用</li>
-                  <li class="class--list--item">
-                    ・無感修復，親友只會覺得你的髮量瞬間暴增
-                  </li>
-                  <li class="class--list--item">・過程無痛</li>
-                  <li class="class--list--item">・沒有麻醉風險</li>
-                  <li class="class--list--item">
-                    ・無需等待毛髮生長期，直接濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・沒有所謂的存活率，我們是100%濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・不需開刀，過程非常輕鬆，快速美麗、帥氣
-                  </li>
-                </ul>
-                <img src="./images/class/class-main.png" alt="class-main" />
-              </div>
-              <img
-                src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
-                alt="class"
-              />
-            </div>
-
-            <div class="md:px-20 class-nav-3 hidden">
-              <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
-                眉眼唇全科班
-              </h2>
-              <p class="mb-4">除了手術植髮您還有更好的選擇</p>
-              <div
-                class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
-              >
-                <ul class="flex flex-col gap-2 class--list">
-                  <li class="class--list--item">・只需要手術的20%的費用</li>
-                  <li class="class--list--item">
-                    ・無感修復，親友只會覺得你的髮量瞬間暴增
-                  </li>
-                  <li class="class--list--item">・過程無痛</li>
-                  <li class="class--list--item">・沒有麻醉風險</li>
-                  <li class="class--list--item">
-                    ・無需等待毛髮生長期，直接濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・沒有所謂的存活率，我們是100%濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・不需開刀，過程非常輕鬆，快速美麗、帥氣
-                  </li>
-                </ul>
-                <img src="./images/class/class-main.png" alt="class-main" />
-              </div>
-              <img
-                src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
-                alt="class"
-              />
-            </div>
-
-            <div class="md:px-20 class-nav-4 hidden">
-              <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
-                眉毛專班
-              </h2>
-              <p class="mb-4">除了手術植髮您還有更好的選擇</p>
-              <div
-                class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
-              >
-                <ul class="flex flex-col gap-2 class--list">
-                  <li class="class--list--item">・只需要手術的20%的費用</li>
-                  <li class="class--list--item">
-                    ・無感修復，親友只會覺得你的髮量瞬間暴增
-                  </li>
-                  <li class="class--list--item">・過程無痛</li>
-                  <li class="class--list--item">・沒有麻醉風險</li>
-                  <li class="class--list--item">
-                    ・無需等待毛髮生長期，直接濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・沒有所謂的存活率，我們是100%濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・不需開刀，過程非常輕鬆，快速美麗、帥氣
-                  </li>
-                </ul>
-                <img src="./images/class/class-main.png" alt="class-main" />
-              </div>
-              <img
-                src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
-                alt="class"
-              />
-            </div>
-
-            <div class="md:px-20 class-nav-5 hidden">
-              <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
-                眼線專班
-              </h2>
-              <p class="mb-4">除了手術植髮您還有更好的選擇</p>
-              <div
-                class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
-              >
-                <ul class="flex flex-col gap-2 class--list">
-                  <li class="class--list--item">・只需要手術的20%的費用</li>
-                  <li class="class--list--item">
-                    ・無感修復，親友只會覺得你的髮量瞬間暴增
-                  </li>
-                  <li class="class--list--item">・過程無痛</li>
-                  <li class="class--list--item">・沒有麻醉風險</li>
-                  <li class="class--list--item">
-                    ・無需等待毛髮生長期，直接濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・沒有所謂的存活率，我們是100%濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・不需開刀，過程非常輕鬆，快速美麗、帥氣
-                  </li>
-                </ul>
-                <img src="./images/class/class-main.png" alt="class-main" />
-              </div>
-              <img
-                src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
-                alt="class"
-              />
-            </div>
-
-            <div class="md:px-20 class-nav-6 hidden">
-              <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
-                水透唇專班
-              </h2>
-              <p class="mb-4">除了手術植髮您還有更好的選擇</p>
-              <div
-                class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
-              >
-                <ul class="flex flex-col gap-2 class--list">
-                  <li class="class--list--item">・只需要手術的20%的費用</li>
-                  <li class="class--list--item">
-                    ・無感修復，親友只會覺得你的髮量瞬間暴增
-                  </li>
-                  <li class="class--list--item">・過程無痛</li>
-                  <li class="class--list--item">・沒有麻醉風險</li>
-                  <li class="class--list--item">
-                    ・無需等待毛髮生長期，直接濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・沒有所謂的存活率，我們是100%濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・不需開刀，過程非常輕鬆，快速美麗、帥氣
-                  </li>
-                </ul>
-                <img src="./images/class/class-main.png" alt="class-main" />
-              </div>
-              <img
-                src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
-                alt="class"
-              />
-            </div>
-
-            <div class="md:px-20 class-nav-7 hidden">
-              <h2 class="about--contain--title text-xl font-bold pt-20 mb-4">
-                學員成功實例分享
-              </h2>
-              <p class="mb-4">除了手術植髮您還有更好的選擇</p>
-              <div
-                class="class--main flex flex-col-reverse md:flex-row mb-10 items-center justify-between"
-              >
-                <ul class="flex flex-col gap-2 class--list">
-                  <li class="class--list--item">・只需要手術的20%的費用</li>
-                  <li class="class--list--item">
-                    ・無感修復，親友只會覺得你的髮量瞬間暴增
-                  </li>
-                  <li class="class--list--item">・過程無痛</li>
-                  <li class="class--list--item">・沒有麻醉風險</li>
-                  <li class="class--list--item">
-                    ・無需等待毛髮生長期，直接濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・沒有所謂的存活率，我們是100%濃密
-                  </li>
-                  <li class="class--list--item">
-                    ・不需開刀，過程非常輕鬆，快速美麗、帥氣
-                  </li>
-                </ul>
-                <img src="./images/class/class-main.png" alt="class-main" />
-              </div>
-              <img
-                src="./images/class/344582110_1875109409533966_2362314787608452933_n.png"
-                alt="class"
-              />
-            </div>
-          </maim>
-        </div>
-      </main>
-      <!------ contain end ------>
     </div>
-    <div id="footer-placeholder"></div>
-    <script>
-      fetch("../components/Footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    </script>
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
