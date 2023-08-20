@@ -442,7 +442,7 @@ const Header = () => {
     <!-- mobile menu btn-->
     <button
       href="/"
-      class="nav--mobile--open md:hidden border border-white py-0 px-5 rounded ml-auto hover:opacity-60"
+      class="nav--mobile--open md:hidden border border-white py-3 px-5 rounded ml-auto hover:opacity-60"
     >
       <i class="fa-solid fa-bars text-white"></i>
     </button>
