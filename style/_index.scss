@@ -32,8 +32,7 @@ main {
       position: absolute;
       top: 60px;
       background-color: rgb(200, 181, 168, 0.6);
-      padding: 20px 12px;
-      width: 180px;
+      padding: 20px 20px;
       display: none;
       z-index: 2;
       &--double {
@@ -57,11 +56,21 @@ main {
       }
     }
   }
-
   &--logo {
     display: block;
-    margin: 32px 0;
-    max-width: 240px;
+    margin-top: 36px;
+    width: 240px;
+    background-image: url("../images/index/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &--logo:hover {
+    display: block;
+    margin-top: 36px;
+    width: 240px;
+    background-image: url("../images/index/logo-w.png");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   &--mobile--open {
     margin: 32px 0;
@@ -100,6 +109,7 @@ main {
   }
 }
 .footer {
+  margin-top: 120px;
   background-image: url("../images/footer/footerBg.png");
   background-position-y: -160px;
   background-repeat: repeat-x;
@@ -111,6 +121,9 @@ main {
     a {
       letter-spacing: 0.16em;
     }
+  }
+  &--item:hover {
+    color: $main-text-3;
   }
   &--icons {
     position: absolute;
@@ -151,6 +164,9 @@ main {
 }
 .nyz-text-dark {
   color: $main-text-1;
+}
+.header-clicked {
+  color: $current-nav-text;
 }
 .nyz-ff-normal {
   font-family: $font-family-2;

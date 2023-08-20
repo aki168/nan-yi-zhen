@@ -107,8 +107,7 @@ main {
   position: absolute;
   top: 60px;
   background-color: rgba(200, 181, 168, 0.6);
-  padding: 20px 12px;
-  width: 180px;
+  padding: 20px 20px;
   display: none;
   z-index: 2;
 }
@@ -133,8 +132,19 @@ main {
 }
 .nav--logo {
   display: block;
-  margin: 32px 0;
-  max-width: 240px;
+  margin-top: 36px;
+  width: 240px;
+  background-image: url("../images/index/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.nav--logo:hover {
+  display: block;
+  margin-top: 36px;
+  width: 240px;
+  background-image: url("../images/index/logo-w.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .nav--mobile--open {
   margin: 32px 0;
@@ -176,6 +186,7 @@ main {
 }
 
 .footer {
+  margin-top: 120px;
   background-image: url("../images/footer/footerBg.png");
   background-position-y: -160px;
   background-repeat: repeat-x;
@@ -186,6 +197,9 @@ main {
 }
 .footer--item a {
   letter-spacing: 0.16em;
+}
+.footer--item:hover {
+  color: #975a16;
 }
 .footer--icons {
   position: absolute;
@@ -228,6 +242,10 @@ main {
 
 .nyz-text-dark {
   color: #927266;
+}
+
+.header-clicked {
+  color: #c3aa9d;
 }
 
 .nyz-ff-normal {
