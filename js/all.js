@@ -1,5 +1,9 @@
 $(document).ready(function () {
   let pathId = window.location.pathname.split("/")[1];
+  if ((pathId).includes("-")){
+    let [_, name, html] = pathId.match(/(\w*)-\w*(\.html)/);
+    pathId = `${name}${html}`;
+  } 
   let navText = document?.getElementById(pathId)?.children[0];
   let navTextEn = document?.getElementById(pathId)?.children[1];
   if (navText) {
@@ -210,7 +214,7 @@ const Header = () => {
           <li
             class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-white mb-2 py-1"
           >
-            <a class="nav--item--link" href="about.html">專業師資</a>
+            <a class="nav--item--link" href="about-teacher.html">專業師資</a>
           </li>
           <li
             class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-white mb-2 py-1"
