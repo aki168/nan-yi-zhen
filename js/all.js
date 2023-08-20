@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  $(".nav--inner").mouseleave((e) => {
+    $(".nav--item--detail").hide();
+  });
   $(".nav--item").hover(function (e) {
     var detail = $(this).find(".nav--item--detail");
     detail.show();
@@ -149,6 +152,15 @@ $(document).ready(function () {
     }
   });
 });
+
+window.onload = function() {
+  const loading = document.getElementById('loading');
+  const content = document.getElementById('content');
+  setTimeout(()=>{
+    loading.style.display = 'none';
+    content.style.display = 'block';
+  }, 400)
+};
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
