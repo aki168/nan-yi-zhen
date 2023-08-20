@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  $(".nav--inner").mouseleave((e) => {
+    $(".nav--item--detail").hide();
+  });
   $(".nav--item").hover(function (e) {
     var detail = $(this).find(".nav--item--detail");
     detail.show();
@@ -156,7 +159,7 @@ window.onload = function() {
   setTimeout(()=>{
     loading.style.display = 'none';
     content.style.display = 'block';
-  }, 1000)
+  }, 400)
 };
 
 const swiper = new Swiper(".swiper", {

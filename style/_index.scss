@@ -17,7 +17,9 @@ main {
   z-index: 1;
   background-color: $main-bg-1;
   color: $main-text-1;
-  padding: 32px 0;
+  &--inner {
+    padding: 32px 0;
+  }
   &--item,
   &--item--double {
     position: relative;
@@ -57,6 +59,8 @@ main {
   }
 
   &--logo {
+    display: block;
+    margin: 32px 0;
     max-width: 240px;
   }
 }
@@ -511,7 +515,7 @@ main {
     background-image: url("../images/南以真紋繡_大圖01.jpg");
   }
   .slider-2 {
-    background-image: url("../images/南以真紋繡_大圖02.jpg");
+    background-image: url("../images/南以真紋繡_大圖02.png");
   }
   @media (max-width: 768px) {
     .slider-1 {

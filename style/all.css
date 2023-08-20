@@ -91,6 +91,8 @@ main {
   z-index: 1;
   background-color: #e5d0be;
   color: #927266;
+}
+.nav--inner {
   padding: 32px 0;
 }
 .nav--item, .nav--item--double {
@@ -130,6 +132,8 @@ main {
   font-size: medium;
 }
 .nav--logo {
+  display: block;
+  margin: 32px 0;
   max-width: 240px;
 }
 
@@ -587,7 +591,7 @@ main {
   background-image: url("../images/南以真紋繡_大圖01.jpg");
 }
 .swiper .slider-2 {
-  background-image: url("../images/南以真紋繡_大圖02.jpg");
+  background-image: url("../images/南以真紋繡_大圖02.png");
 }
 @media (max-width: 768px) {
   .swiper .slider-1 {
