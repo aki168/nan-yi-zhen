@@ -153,14 +153,14 @@ $(document).ready(function () {
   });
 });
 
-window.onload = function() {
-  const loading = document.getElementById('loading');
-  const content = document.getElementById('content');
-  setTimeout(()=>{
-    loading.style.display = 'none';
-    content.style.display = 'block';
-  }, 400)
-};
+// window.onload = function() {
+//   const loading = document.getElementById('loading');
+//   const content = document.getElementById('content');
+//   setTimeout(()=>{
+//     loading.style.display = 'none';
+//     content.style.display = 'block';
+//   }, 400)
+// };
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",

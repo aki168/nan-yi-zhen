@@ -136,6 +136,9 @@ main {
   margin: 32px 0;
   max-width: 240px;
 }
+.nav--mobile--open {
+  margin: 32px 0;
+}
 
 .sider {
   width: 156px;
