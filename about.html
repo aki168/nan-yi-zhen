@@ -13,18 +13,10 @@
     <title>南以真 | Nan Yi Zhen</title>
   </head>
   <body>
-    <div class="loading" id="loading">Loading...</div>
     <div id="content">
       <div class="about--wrap">
         <div class="about--wrap--bg"></div>
         <div id="header-placeholder"></div>
-        <script>
-          fetch("../components/Header.html")
-            .then((response) => response.text())
-            .then((data) => {
-              document.getElementById("header-placeholder").innerHTML = data;
-            });
-        </script>
         <!------ contain start  ------>
         <main class="nyz-container md:p-20">
           <div class="breadcrumb mb-16 hidden md:flex">
@@ -199,13 +191,6 @@
         <!------ contain end ------>
       </div>
       <div id="footer-placeholder"></div>
-      <script>
-        fetch("../components/Footer.html")
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("footer-placeholder").innerHTML = data;
-          });
-      </script>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"
