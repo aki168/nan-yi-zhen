@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style/all.css" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+  />
+    <link rel="stylesheet" href="./style/all.css" />
     <title>南以真 | Nan Yi Zhen</title>
   </head>
   <body>
@@ -85,9 +84,8 @@
               </p>
             </article>
             <div class="index--portfolio--cards flex flex-wrap justify-between">
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-1" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -101,9 +99,17 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+              <a data-lightbox="example-set-1" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-2" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -117,9 +123,17 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+              <a data-lightbox="example-set-2" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-3" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -133,9 +147,17 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+              <a data-lightbox="example-set-3" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-4" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -149,6 +171,15 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
+              <a data-lightbox="example-set-4" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
             </div>
           </div>
 
@@ -225,6 +256,18 @@
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="./js/all.js"></script>
+    <script>
+      lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'showImageNumberLabel': true, 
+      'maxWidth': "100vw",
+      'imageFadeDuration': 300,
+      'alwaysShowNavOnTouchDevices': true,
+      'positionFromTop': 180,
+    });
+    </script>
   </body>
 </html>

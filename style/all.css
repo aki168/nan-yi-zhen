@@ -435,6 +435,7 @@ main {
   display: block;
   border: 1px solid white;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .portfolio--wrap--bg, .price--wrap--bg, .reserve--wrap--bg {
@@ -621,4 +622,17 @@ main {
   .swiper .slider-2 {
     background-image: url("../images/手機大圖輪播02.jpg");
   }
+}
+
+.lightbox .lb-container .lb-image {
+  border: none;
+}
+
+.lightbox .lb-outerContainer {
+  width: 100%;
+  background: none;
+}
+
+.lb-closeContainer {
+  display: none;
 }/*# sourceMappingURL=all.css.map */
