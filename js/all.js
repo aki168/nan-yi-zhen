@@ -170,7 +170,7 @@ $(document).ready(function () {
         }
       }
     }
-  });  
+  });
 });
 
 // window.onload = function() {
@@ -736,3 +736,43 @@ const Footer = () => {
 
 document.getElementById("header-placeholder").innerHTML = Header();
 document.getElementById("footer-placeholder").innerHTML = Footer();
+
+// web componet
+class CustomLightBox extends HTMLElement {
+  constructor() {
+    // Always call super first in constructor
+    super();
+    const shadow = this.attachShadow({ mode: "open" });
+    const lbScript = document.createElement("script");
+    lbScript.src = "https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js";
+    // // 将 <script> 元素添加到 shadow DOM
+    shadow.appendChild(lbScript);
+    // constructor definition left out for brevity
+    const wrapper = document.createElement("div");
+    const cover = document.createElement("a");
+    cover.setAttribute("class", "lightbox-cover");
+    cover.setAttribute("data-lightbox", "lightbox-set");
+    cover.href = this.hasAttribute("img")
+      ? this.getAttribute("img")
+      : "images/portfolio/work-2.png";
+
+    // Insert cover
+    const img = document.createElement("img");
+    img.setAttribute("class", "example-image");
+    img.setAttribute("alt", "作品");
+    img.src = this.hasAttribute("img")
+      ? this.getAttribute("img")
+      : "images/portfolio/work-2.png";
+    cover.appendChild(img);
+
+    const style = document.createElement("style");
+    style.textContent = ``;
+
+    // Attach the created elements to the shadow dom
+      shadow.appendChild(style);
+      shadow.appendChild(wrapper);
+      wrapper.appendChild(cover);
+      cover.appendChild(img);
+  }
+}
+customElements.define("light-box", CustomLightBox);
