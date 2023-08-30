@@ -545,3 +545,24 @@ main {
     }
   }
 }
+
+// light box
+.lightbox .lb-container .lb-image {
+  border-radius: 0;
+  border: none;
+}
+.lightbox .lb-outerContainer {
+  border-radius: 0;
+  width: 100%;
+}
+.lb-closeContainer {
+  display: none;
+}
+
+// .lb-nav a.lb-prev {
+//   background: url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/prev.png") right 48% no-repeat;
+// }
+
+// .lb-nav a.lb-next {
+//   background: url("https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/next.png") right 48% no-repeat;
+// }

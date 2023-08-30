@@ -1,9 +1,9 @@
 $(document).ready(function () {
   let pathId = window.location.pathname.split("/")[1];
-  if ((pathId).includes("-")){
+  if (pathId.includes("-")) {
     let [_, name, html] = pathId.match(/(\w*)-\w*(\.html)/);
     pathId = `${name}${html}`;
-  } 
+  }
   let navText = document?.getElementById(pathId)?.children[0];
   let navTextEn = document?.getElementById(pathId)?.children[1];
   if (navText) {
@@ -14,7 +14,7 @@ $(document).ready(function () {
   }
   if (navTextEn) {
     navTextEn.setAttribute("class", "sub-text font-light header-clicked");
-  };
+  }
   $(".nav--inner").mouseleave((e) => {
     $(".nav--item--detail").hide();
     $(".nav--item--detail--double").hide();
@@ -170,7 +170,7 @@ $(document).ready(function () {
         }
       }
     }
-  });
+  });  
 });
 
 // window.onload = function() {
@@ -181,15 +181,6 @@ $(document).ready(function () {
 //     content.style.display = 'block';
 //   }, 400)
 // };
-
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: true,
-  autoplay: {
-    delay: 5500,
-  },
-});
-
 // [Layout] -----------------------------------------------------------
 
 const Header = () => {

@@ -621,4 +621,18 @@ main {
   .swiper .slider-2 {
     background-image: url("../images/手機大圖輪播02.jpg");
   }
+}
+
+.lightbox .lb-container .lb-image {
+  border-radius: 0;
+  border: none;
+}
+
+.lightbox .lb-outerContainer {
+  border-radius: 0;
+  width: 100%;
+}
+
+.lb-closeContainer {
+  display: none;
 }/*# sourceMappingURL=all.css.map */
