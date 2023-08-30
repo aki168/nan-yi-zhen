@@ -17,59 +17,6 @@
       <div class="about--wrap--bg"></div>
       <div id="header-placeholder"></div>
       <!------ contain start  ------>
-      <div>
-        <a
-          class="example-image-link"
-          href="https://picsum.photos/id/237/500/400"
-          data-lightbox="example-set-2"
-          data-title=""
-        >
-          <img
-            class="example-image"
-            src="https://picsum.photos/id/237/300/200"
-            alt="dog"
-          />
-        </a>
-
-        <a
-          class="example-image-link hidden"
-          href="https://picsum.photos/id/1003/500/400"
-          data-lightbox="example-set-2"
-          data-title=""
-        >
-          <img
-            class="example-image"
-            src="https://picsum.photos/id/1003/300/200"
-            alt="deer"
-          />
-        </a>
-
-        <a
-          class="example-image-link hidden"
-          href="https://picsum.photos/id/219/500/400"
-          data-lightbox="example-set-2"
-          data-title=""
-        >
-          <img
-            class="example-image"
-            src="https://picsum.photos/id/219/300/200"
-            alt="bigcat2"
-          />
-        </a>
-
-        <a
-          class="example-image-link hidden"
-          href="https://picsum.photos/id/360/500/400"
-          data-lightbox="example-set-2"
-          data-title=""
-        >
-          <img
-            class="example-image"
-            src="https://picsum.photos/id/360/300/200"
-            alt="flower"
-          />
-        </a>
-      </div>
       <main class="nyz-container md:p-20">
         <div class="breadcrumb mb-16 hidden md:flex">
           <div class="px-3 pt-1">
@@ -137,9 +84,8 @@
               </p>
             </article>
             <div class="index--portfolio--cards flex flex-wrap justify-between">
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-1" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -153,9 +99,17 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+              <a data-lightbox="example-set-1" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-2" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -169,9 +123,17 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+              <a data-lightbox="example-set-2" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-3" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -185,9 +147,17 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
-              <a
-                href="portfolio-eyebrown_fog.html"
-                class="portfolio--card md:w-[330px]"
+              <a data-lightbox="example-set-3" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
+            <div class="nyz--light--box">
+              <a data-lightbox="example-set-4" class="portfolio--card md:w-[330px]" href="./images/portfolio/work-2.png"
               >
                 <img
                   class="object-cover rounded-lg"
@@ -201,6 +171,15 @@
                   副標題副標題副標題副標題<br />副標題副標題副標題副標題
                 </p>
               </a>
+              <a data-lightbox="example-set-4" class="hidden" href="./images/portfolio/work.png"
+              >
+                <img
+                  class="object-cover rounded-lg"
+                  src="./images/portfolio/work.png"
+                  alt="portfolio"
+                />
+              </a>
+            </div>
             </div>
           </div>
 
@@ -283,10 +262,11 @@
       lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true,
-      'showImageNumberLabel': false, 
+      'showImageNumberLabel': true, 
       'maxWidth': "100vw",
       'imageFadeDuration': 300,
       'alwaysShowNavOnTouchDevices': true,
+      'positionFromTop': 180,
     });
     </script>
   </body>

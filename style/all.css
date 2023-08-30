@@ -435,6 +435,7 @@ main {
   display: block;
   border: 1px solid white;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .portfolio--wrap--bg, .price--wrap--bg, .reserve--wrap--bg {
@@ -624,13 +625,12 @@ main {
 }
 
 .lightbox .lb-container .lb-image {
-  border-radius: 0;
   border: none;
 }
 
 .lightbox .lb-outerContainer {
-  border-radius: 0;
   width: 100%;
+  background: none;
 }
 
 .lb-closeContainer {

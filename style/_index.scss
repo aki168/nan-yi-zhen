@@ -347,6 +347,7 @@ main {
   display: block;
   border: 1px solid white;
   border-radius: 8px;
+  cursor: pointer;
 }
 .portfolio--wrap, .price--wrap, .reserve--wrap {
   &--bg {
@@ -548,12 +549,13 @@ main {
 
 // light box
 .lightbox .lb-container .lb-image {
-  border-radius: 0;
+  // border-radius: 0;
   border: none;
 }
 .lightbox .lb-outerContainer {
-  border-radius: 0;
+  // border-radius: 0;
   width: 100%;
+  background: none;
 }
 .lb-closeContainer {
   display: none;
