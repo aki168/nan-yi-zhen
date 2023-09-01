@@ -142,6 +142,10 @@ $(document).ready(function () {
     }
   });
 
+  $(".news--card").click(function (e) {
+    location.href = `${location.origin}/news-article.html`;
+  });
+
   $(".news-nav details").click(function (e) {
     $(this)
       .find("summary")
@@ -170,7 +174,7 @@ $(document).ready(function () {
         }
       }
     }
-  });  
+  });
 });
 
 // window.onload = function() {
@@ -181,6 +185,7 @@ $(document).ready(function () {
 //     content.style.display = 'block';
 //   }, 400)
 // };
+
 // [Layout] -----------------------------------------------------------
 
 const Header = () => {
@@ -190,7 +195,7 @@ const Header = () => {
       <img alt="logo" class="hidden" />
     </a>
     <!-- PC menu-->
-    <ul class="nav--inner md:flex flex-wrap items-center px-4 hidden">
+    <ul class="nav--inner md:flex flex-wrap items-center px-4 hidden gap-2">
       <li class="nav--item">
         <a class="nav--item--link" href="about.html" id="about.html">
           <div class="font-bold pb-[2px] hover:text-yellow-800">關於我們</div>
@@ -625,113 +630,113 @@ const Header = () => {
 
 const Footer = () => {
   return `<footer class="footer">
-    <div class="nyz-container py-10 footer--inner">
-      <nav class="md:w-1/2 mx-auto px-6 md:px-0">
-        <h2 class="text-3xl py-4 mb-6 text-center md:text-start">
-          Nan Yi Zhen
-        </h2>
-        <ul
-          class="flex flex-col md:flex-row flex-wrap gap-1 text-lg md:text-base mb-6 text-center md:text-start"
-        >
-          <li class="footer--item md:w-[23%]">
-            <a href="about.html">關於我們</a>
-          </li>
-          <li class="footer--item md:w-[23%]">
-            <a href="portfolio.html">紋繡作品</a>
-          </li>
-          <li class="footer--item md:w-[23%]">
-            <a href="price.html">服務價格</a>
-          </li>
-          <li class="footer--item md:w-[23%]">
-            <a href="reserve.html">預約&須知</a>
-          </li>
-          <li class="footer--item md:w-[23%]">
-            <a href="qa.html">常見問題</a>
-          </li>
-          <li class="footer--item md:w-[23%]">
-            <a href="news.html">專業文章</a>
-          </li>
-          <li class="footer--item md:w-[23%]">
-            <a href="class.html">紋繡課程</a>
-          </li>
-        </ul>
-        <ul
-          class="flex flex-col md:flex-row flex-wrap gap-4 text-lg md:text-base mb-4"
-        >
-          <li class="flex flex-wrap md:w-1/3 gap-2">
-            <!-- <i class="fa-solid fa-phone"></i> -->
-            <img
-              class="object-contain"
-              src="images/footer/20230612_南以真紋繡_01-1關於我們_09.png"
-              alt="icon"
-            />
-            <a href="/">0928-571-472</a>
-          </li>
-          <li class="flex flex-wrap md:w-1/2 gap-2">
-            <!-- <i class="fa-solid fa-calendar-days"></i> -->
-            <img
-              class="object-contain"
-              src="images/footer/20230612_南以真紋繡_01-1關於我們_11.png"
-              alt="icon"
-            />
-            <a href="/">nanyizhentw@gmail.com</a>
-          </li>
-          <li class="flex flex-wrap gap-2">
-            <!-- <i class="fa-solid fa-map-location-dot"></i> -->
-            <img
-              class="object-contain"
-              src="images/footer/20230612_南以真紋繡_01-1關於我們_15.png"
-              alt="icon"
-            />
-            <a href="/">高雄市苓雅區廣州一街122巷6號3樓</a>
-          </li>
-        </ul>
+  <div class="nyz-container py-10 footer--inner">
+    <nav class="md:w-1/2 mx-auto px-6 md:px-0">
+      <h2 class="text-3xl py-4 mb-6 text-center md:text-start cursor-default">
+        Nan Yi Zhen
+      </h2>
+      <ul
+        class="flex flex-col md:flex-row flex-wrap gap-1 text-lg md:text-base mb-6 text-center md:text-start"
+      >
+        <li class="footer--item md:w-[23%]">
+          <a class="hover:text-yellow-800" href="about.html">關於我們</a>
+        </li>
+        <li class="footer--item md:w-[23%]">
+          <a class="hover:text-yellow-800" href="portfolio.html">紋繡作品</a>
+        </li>
+        <li class="footer--item md:w-[23%]">
+          <a class="hover:text-yellow-800" href="price.html">服務價格</a>
+        </li>
+        <li class="footer--item md:w-[23%]">
+          <a class="hover:text-yellow-800" href="reserve.html">預約&須知</a>
+        </li>
+        <li class="footer--item md:w-[23%]">
+          <a class="hover:text-yellow-800" href="qa.html">常見問題</a>
+        </li>
+        <li class="footer--item md:w-[23%]">
+          <a class="hover:text-yellow-800" href="news.html">專業文章</a>
+        </li>
+        <li class="footer--item md:w-[23%]">
+          <a class="hover:text-yellow-800" href="class.html">紋繡課程</a>
+        </li>
+      </ul>
+      <ul
+        class="flex flex-col md:flex-row flex-wrap gap-4 text-lg md:text-base mb-4"
+      >
+        <li class="flex flex-wrap md:w-1/3 gap-2">
+          <!-- <i class="fa-solid fa-phone"></i> -->
+          <img
+            class="object-contain"
+            src="images/footer/20230612_南以真紋繡_01-1關於我們_09.png"
+            alt="icon"
+          />
+          <a class="hover:text-yellow-800" href="tel:+886928571472">0928-571-472</a>
+        </li>
+        <li class="flex flex-wrap md:w-1/2 gap-2">
+          <!-- <i class="fa-solid fa-calendar-days"></i> -->
+          <img
+            class="object-contain"
+            src="images/footer/20230612_南以真紋繡_01-1關於我們_11.png"
+            alt="icon"
+          />
+          <a class="hover:text-yellow-800" href="mailto:nanyizhentw@gmail.com">nanyizhentw@gmail.com</a>
+        </li>
+        <li class="flex flex-wrap gap-2">
+          <!-- <i class="fa-solid fa-map-location-dot"></i> -->
+          <img
+            class="object-contain"
+            src="images/footer/20230612_南以真紋繡_01-1關於我們_15.png"
+            alt="icon"
+          />
+          <a class="hover:text-yellow-800" target="_blank" href="https://goo.gl/maps/F2JfLudqkwk4jYvB7">高雄市苓雅區廣州一街122巷6號3樓</a>
+        </li>
+      </ul>
 
-        <ul class="footer--icons flex flex-col gap-3">
-          <li>
-            <a href="/" class="hover:opacity-75">
-              <img
-                src="images/footer/phoneIcon.jpg"
-                alt="phoneIcon"
-                class="rounded-lg drop-shadow-lg"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="/" class="hover:opacity-75">
-              <img
-                src="images/footer/lineIcon.jpg"
-                alt="phoneIcon"
-                class="rounded-lg drop-shadow-lg"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="/" class="hover:opacity-75">
-              <img
-                src="images/footer/chatIcon.jpg"
-                alt="phoneIcon"
-                class="rounded-lg drop-shadow-lg"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="/" class="footer--icons--top hover:opacity-75">
-              <img
-                src="images/footer/topIcon.jpg"
-                alt="phoneIcon"
-                class="rounded-lg drop-shadow-lg"
-              />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="footer--icons flex flex-col gap-3">
+        <li>
+          <a class="hover:text-yellow-800" href="/" class="hover:opacity-75">
+            <img
+              src="images/footer/phoneIcon.jpg"
+              alt="phoneIcon"
+              class="rounded-lg drop-shadow-lg"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="hover:text-yellow-800" href="/" class="hover:opacity-75">
+            <img
+              src="images/footer/lineIcon.jpg"
+              alt="lineIcon"
+              class="rounded-lg drop-shadow-lg"
+            />
+          </a>
+        </li>
+        <li>
+          <a class="hover:text-yellow-800" href="/" class="hover:opacity-75">
+            <img
+              src="images/footer/chatIcon.jpg"
+              alt="chatIcon"
+              class="rounded-lg drop-shadow-lg"
+            />
+          </a>
+        </li>
+        <li>
+          <button class="hover:text-yellow-800 footer--icons--top hover:opacity-75">
+            <img
+              src="images/footer/topIcon.jpg"
+              alt="topIcon"
+              class="rounded-lg drop-shadow-lg"
+            />
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-    <div class="footer--end text-center font-light py-2">
-      2023 © 南以真 半永久化妝.紋繡
-    </div>
-  </footer> `;
+  <div class="footer--end text-center font-light py-2">
+    2023 © 南以真 半永久化妝.紋繡
+  </div>
+</footer> `;
 };
 
 document.getElementById("header-placeholder").innerHTML = Header();
