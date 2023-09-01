@@ -78,6 +78,9 @@ main {
 }
 .sider {
   width: 156px;
+  button, a {
+    letter-spacing: 2px;
+  }
   &--menu {
     font-weight: bold;
     text-align: center;
@@ -135,6 +138,9 @@ main {
     color: white;
     background-color: $main-bg-2;
   }
+}
+#footer-placeholder {
+  padding-top: 40px;
 }
 .horizon {
   height: 1px;
@@ -318,7 +324,6 @@ main {
 }
 .about--contain {
   width: calc(100% - 156px);
-  color: $main-text-2;
   &--title {
     color: $main-text-1;
   }
@@ -364,14 +369,17 @@ main {
   服務價格
 */
 .price {
+  &--contain {
+    font-size: 18px;
+  }
   &--title {
     display: inline-block;
     color: white;
     border-radius: 0px 16px 16px 16px;
     background-color: $main-bg-3;
     padding: 6px 20px;
-    margin-bottom: 12px;
-    margin-left: -16px;
+    margin-bottom: 20px;
+    // margin-left: -16px;
   }
   &--list {
     margin-bottom: 48px;
@@ -383,7 +391,8 @@ main {
       padding-left: 4px;
     }
     &--block {
-      margin: 24px 0 24px -16px;
+      // margin: 24px 0 24px -16px;
+      margin: 24px 0 24px 0px;
       font-weight: bold;
       padding: 12px 20px;
       border-radius: 0px 16px 16px 16px;
@@ -407,6 +416,10 @@ main {
     height: 540px;
     position: absolute;
   }
+}
+
+.news--card {
+  cursor: pointer;
 }
 
 /*
