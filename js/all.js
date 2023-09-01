@@ -694,7 +694,7 @@ const Footer = () => {
 
       <ul class="footer--icons flex flex-col gap-3">
         <li>
-          <a class="hover:text-yellow-800" href="/" class="hover:opacity-75">
+          <a class="hover:text-yellow-800" href="tel:+886928571472" class="hover:opacity-75">
             <img
               src="images/footer/phoneIcon.jpg"
               alt="phoneIcon"
@@ -705,9 +705,9 @@ const Footer = () => {
         <li>
           <a class="hover:text-yellow-800" href="/" class="hover:opacity-75">
             <img
-              src="images/footer/lineIcon.jpg"
+              src="images/about/LINE_logo.svg.png"
               alt="lineIcon"
-              class="rounded-lg drop-shadow-lg"
+              class="rounded-lg drop-shadow-lg h-10 h-10"
             />
           </a>
         </li>

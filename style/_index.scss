@@ -5,6 +5,7 @@ body {
   color: $main-text-1;
   font-family: $font-family-2;
   letter-spacing: 0.1em;
+  font-size: 15px;
 }
 main {
   min-height: 48vh;
@@ -370,7 +371,7 @@ main {
 */
 .price {
   &--contain {
-    font-size: 18px;
+    font-size: 16px;
   }
   &--title {
     display: inline-block;

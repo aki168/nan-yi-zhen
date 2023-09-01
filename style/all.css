@@ -76,6 +76,7 @@ body {
   color: #927266;
   font-family: "Noto Serif TC", serif;
   letter-spacing: 0.1em;
+  font-size: 15px;
 }
 
 main {
@@ -457,7 +458,7 @@ main {
   服務價格
 */
 .price--contain {
-  font-size: 18px;
+  font-size: 16px;
 }
 .price--title {
   display: inline-block;
