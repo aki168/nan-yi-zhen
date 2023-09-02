@@ -468,7 +468,7 @@ main {
     padding: 6px 20px;
     margin-bottom: 12px;
   }
-  &--contain {
+  &--contain, &-pane {
     width: 100%;
   }
   &--card:hover {

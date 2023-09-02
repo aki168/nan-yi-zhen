@@ -546,10 +546,13 @@ main {
   padding: 6px 20px;
   margin-bottom: 12px;
 }
-.reserve--wrap--contain,
+.reserve--wrap--contain, .reserve--wrap-pane,
 .price--wrap--contain,
+.price--wrap-pane,
 .qa--contain,
-.news--contain {
+.qa-pane,
+.news--contain,
+.news-pane {
   width: 100%;
 }
 .reserve--wrap--card:hover,
