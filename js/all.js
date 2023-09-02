@@ -125,6 +125,36 @@ $(document).ready(function () {
     }
   });
 
+  const detailsOne = Array.from(document.querySelectorAll(".qa-nav-1 details"));
+  detailsOne.forEach((detail) => {
+    detail.addEventListener("click", (e) => {
+      const active = detailsOne.find((d) => d.open);
+      if (!e.currentTarget.open && active) {
+        active.open = false;
+      }
+    });
+  });
+
+  const detailsTwo = Array.from(document.querySelectorAll(".qa-nav-2 details"));
+  detailsTwo.forEach((detail) => {
+    detail.addEventListener("click", (e) => {
+      const active = detailsTwo.find((d) => d.open);
+      if (!e.currentTarget.open && active) {
+        active.open = false;
+      }
+    });
+  });
+
+  const detailsThree = Array.from(document.querySelectorAll(".qa-nav-3 details"));
+  detailsThree.forEach((detail) => {
+    detail.addEventListener("click", (e) => {
+      const active = detailsThree.find((d) => d.open);
+      if (!e.currentTarget.open && active) {
+        active.open = false;
+      }
+    });
+  });
+
   $(".class-nav li").click(function (e) {
     $(this).addClass("border-b-yellow-800/50 text-yellow-800");
     $(this).siblings().removeClass("border-b-yellow-800/50 text-yellow-800");
@@ -144,6 +174,17 @@ $(document).ready(function () {
 
   $(".news--card").click(function (e) {
     location.href = `${location.origin}/news-article.html`;
+  });
+
+  const newsDetails = Array.from(document.querySelectorAll(".accordion--menu details"));
+  console.log(newsDetails);
+  newsDetails.forEach((detail) => {
+    detail.addEventListener("click", (e) => {
+      const active = newsDetails.find((d) => d.open);
+      if (!e.currentTarget.open && active) {
+        active.open = false;
+      }
+    });
   });
 
   $(".news-nav details").click(function (e) {
