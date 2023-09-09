@@ -27,12 +27,12 @@
 
         <div class="index--wrap">
           <!-- 紋繡作品 -->
-          <section class="nyz-container mb-16">
+          <section class="nyz-container mb-16 px-20">
             <div class="index--portfolio--title">
               <h2 class="text-5xl">Portfolio</h2>
               <h3 class="text-end text-xl">紋繡作品</h3>
             </div>
-            <div class="index--portfolio--cards flex flex-wrap justify-around">
+            <div class="index--portfolio--cards flex flex-wrap justify-around gap-y-10">
               <a
                 href="portfolio.html"
                 class="portfolio--card md:h-[330px] md:w-[330px]"
@@ -209,13 +209,13 @@
           </section>
         </div>
         <!-- 預約須知 -->
-        <section class="nyz-container">
+        <section class="nyz-container px-20">
           <div class="index--reserve">
             <div class="index--reserve--title">
               <h2 class="text-5xl">Reserve</h2>
               <h3 class="text-end text-xl">預約&須知</h3>
             </div>
-            <ul class="flex flex-wrap justify-center">
+            <ul class="flex flex-wrap justify-around">
               <li class="index--reserve--item md:w-[240px] px-4 mb-4">
                 <h4 class="font-bold pb-2">我要預約</h4>
                 <a href="reserve.html" class="index--reserve--card">
@@ -284,7 +284,18 @@
         direction: "horizontal",
         loop: true,
         autoplay: {
-          delay: 6000,
+          delay: 7000,
+        },
+        effect: "fade",
+        creativeEffect: {
+          prev: {
+            // will set `translateZ(-400px)` on previous slides
+            translate: [0, 0, -400],
+          },
+          next: {
+            // will set `translateX(100%)` on next slides
+            translate: ["100%", 0, 0],
+          },
         },
       });
     </script>
