@@ -80,7 +80,7 @@ main {
 .sider {
   width: 156px;
   button, a {
-    letter-spacing: 2px;
+    letter-spacing: 4px;
   }
   &--menu {
     font-weight: bold;
@@ -188,7 +188,7 @@ main {
 */
 .index--portfolio--title {
   letter-spacing: 0.2em;
-  margin: 16px -100px;
+  margin: 16px -140px;
   padding: 24px 82px;
   display: inline-block;
   background-image: url("../images/index/portfolioTitleBg.png");
@@ -257,7 +257,7 @@ main {
   top: 0;
   letter-spacing: 0.2em;
   margin: 16px 0px;
-  padding: 24px 82px;
+  padding: 24px 40px;
   display: inline-block;
   h2 {
     font-family: $font-family-3;
@@ -338,7 +338,7 @@ main {
 */
 .portfolio--card {
   position: relative;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 40px;
   letter-spacing: 0.2em;
 }

@@ -104,8 +104,11 @@ $(document).ready(function () {
     }
   });
 
-  $(".portfolio--card").hover(() => {
-    $(this).find("h3").toggleClass("text-yellow-800");
+  $(".portfolio--card").each(function() {
+    $(this).hover(() => {
+      $(this).find("h3").toggleClass("text-yellow-800");
+      $(this).find("p").toggleClass("text-yellow-800");
+    });
   });
 
   $(".qa-nav li").click(function (e) {
@@ -242,7 +245,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">關於我們</div>
           <div class="text-white sub-text font-light">about</div>
         </a>
-        <ul class="nav--item--detail w-32">
+        <ul class="nav--item--detail w-32 text-center">
           <li
             class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-white mb-2 py-1"
           >
@@ -266,7 +269,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">紋繡作品</div>
           <div class="text-white sub-text font-light">portfolio</div>
         </a>
-        <ul class="nav--item--detail w-32">
+        <ul class="nav--item--detail w-31">
           <li
             class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-white mb-2 py-1"
           >
@@ -313,7 +316,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">預約與須知</div>
           <div class="text-white sub-text font-light">reserve</div>
         </a>
-        <ul class="nav--item--detail w-40">
+        <ul class="nav--item--detail w-32">
           <li
             class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-white mb-2 py-1"
           >
@@ -342,7 +345,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">常見問題</div>
           <div class="text-white sub-text font-light">Q&A</div>
         </a>
-        <ul class="nav--item--detail w-32">
+        <ul class="nav--item--detail w-31">
           <li
             class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-white mb-2 py-1"
           >
@@ -441,7 +444,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">紋繡課程</div>
           <div class="text-white sub-text font-light">class</div>
         </a>
-        <ul class="nav--item--detail w-52">
+        <ul class="nav--item--detail w-[180px]">
           <li
             class="border-solid border-b border-b-white/0 hover:border-b hover:border-b-yellow-800/50 hover:text-white mb-2 py-1"
           >
