@@ -107,6 +107,16 @@ main {
 .nav--item .sub-text, .nav--item--double .sub-text {
   font-family: "Didot", "GFS Didot", serif;
 }
+.nav--item--li, .nav--item--double--li {
+  border-bottom: 1px solid transparent;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  transition: #975a16 0.3s, #975a16 0.3s;
+}
+.nav--item--li:hover, .nav--item--double--li:hover {
+  border-bottom: 1px solid #ad9483; /* Equivalent to transparent */
+  color: white;
+}
 .nav--item--detail, .nav--item--double--detail {
   border-radius: 0px 20px 20px 20px;
   position: absolute;
@@ -129,6 +139,9 @@ main {
 .nav--item--detail--double--sub, .nav--item--double--detail--double--sub {
   letter-spacing: 2px;
   color: white;
+}
+.nav--item--detail--double--sub li:hover, .nav--item--double--detail--double--sub li:hover {
+  color: #ab937e;
 }
 .nav--item--detail--mobile, .nav--item--double--detail--mobile {
   display: none;
@@ -158,7 +171,8 @@ main {
 .sider {
   width: 156px;
 }
-.sider button, .sider a {
+.sider button,
+.sider a {
   letter-spacing: 4px;
 }
 .sider--menu {
@@ -329,6 +343,11 @@ main {
   background-color: #927266;
 }
 
+.index--price--item {
+  width: 100%;
+  text-align: center;
+}
+
 .index--reserve {
   position: relative;
   padding-top: 200px;
@@ -449,7 +468,9 @@ main {
   cursor: pointer;
 }
 
-.portfolio--wrap--bg, .price--wrap--bg, .reserve--wrap--bg {
+.portfolio--wrap--bg,
+.price--wrap--bg,
+.reserve--wrap--bg {
   z-index: -1;
   background-image: url("../images/about/向量圖智慧型物件.png");
   background-repeat: no-repeat;
@@ -471,12 +492,14 @@ main {
   background-color: #ad9483;
   padding: 6px 20px;
   margin-bottom: 20px;
+  margin-left: -12px;
 }
 .price--list {
   margin-bottom: 48px;
 }
 .price--list dt {
   padding: 8px 0;
+  margin-left: -3px;
 }
 .price--list dd {
   margin-bottom: 8px;
@@ -618,30 +641,138 @@ main {
 /*
   輪播設定 swiper-config
 */
-.swiper {
-  height: 87vh;
+/*
+  輪播設定 純CSS
+*/
+.carousel {
+  margin-left: 0;
+  margin-right: 0;
 }
-.swiper .swiper-slide {
-  background-size: cover;
-  background-position: center;
+
+ul.slides {
+  z-index: 1;
+  display: block;
+  position: relative;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
 }
-.swiper .swiper-button-next,
-.swiper .swiper-button-prev {
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+ul.slides input {
   display: none;
 }
-.swiper .slider-1 {
-  background-image: url("../images/南以真紋繡_大圖01.jpg");
+
+.slide-container {
+  display: block;
 }
-.swiper .slider-2 {
-  background-image: url("../images/南以真紋繡_大圖02.png");
+
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
 }
-@media (max-width: 768px) {
-  .swiper .slider-1 {
-    background-image: url("../images/手機大圖輪播01.jpg");
-  }
-  .swiper .slider-2 {
-    background-image: url("../images/手機大圖輪播02.jpg");
-  }
+
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  font-size: 100px;
+  line-height: 600px;
+  color: #fff;
+}
+
+.carousel-controls label {
+  display: none;
+  position: absolute;
+  padding: 0 20px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label {
+  opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+  opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+  width: 49%;
+  text-align: left;
+  left: 0;
+}
+
+.carousel-controls .next-slide {
+  width: 49%;
+  text-align: right;
+  right: 0;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 999;
+  text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+  margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+  display: block;
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+  opacity: 1;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
 }
 
 .lightbox .lb-container .lb-image {
