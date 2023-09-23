@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style/all.css" />
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    /> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>南以真 | Nan Yi Zhen</title>
   </head>
   <body>
@@ -18,13 +18,26 @@
       <!------ contain start  ------>
       <main>
         <!-- Slider main container -->
-        <!-- <section class="swiper mb-10">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide slider-1"></div>
-            <div class="swiper-slide slider-2"></div>
-          </div>
-        </section> -->
-        <div class="carousel">
+        <section class="swiper mb-10">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide slider-1">
+              <img
+                  class="hidden md:block"
+                  src="./images/南以真紋繡_大圖01.jpg"
+                />
+                <img class="md:hidden" src="./images/手機大圖輪播01.jpg" />
+            </div>
+            <div class="swiper-slide slider-2">
+              <img
+                  class="hidden md:block"
+                  src="./images/南以真紋繡_大圖02.png"
+                />
+                <img class="md:hidden" src="./images/手機大圖輪播02.jpg" />
+            </div>
+            </div>
+        </section>
+        
+        <!-- <div class="carousel">
           <ul class="slides">
             <input type="radio" name="radio-buttons" id="img-1" checked />
             <li class="slide-container">
@@ -67,7 +80,7 @@
               <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
             </div>
           </ul>
-        </div>
+        </div> -->
 
         <div class="index--wrap">
           <!-- 紋繡作品 -->
@@ -351,7 +364,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/all.js"></script>
-    <!-- <script>
+    <script>
       const swiper = new Swiper(".swiper", {
         direction: "horizontal",
         loop: true,
@@ -370,6 +383,6 @@
           },
         },
       });
-    </script> -->
+    </script>
   </body>
 </html>
