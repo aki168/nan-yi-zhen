@@ -230,7 +230,9 @@ $(document).ready(function () {
       let idx = mainList.indexOf(e.currentTarget);
       let target = subItems.children[idx];
       Array.from(subItems.children).forEach((item) => item.setAttribute("class", "hidden"));
-      target.setAttribute("class", "px-3");
+      if(target){
+        target.setAttribute("class", "px-3");
+      }
     });
   }
 });
