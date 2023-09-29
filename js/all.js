@@ -219,6 +219,22 @@ $(document).ready(function () {
       }
     }
   });
+  // 雙表格: 專業文章
+  const mainItems = document.querySelector(
+    ".nav--item--detail--double--main ul"
+  ).children;
+  const mainList = Array.from(mainItems);
+  const subItems = document.querySelector(".nav--item--detail--double--sub");
+  for (let mainItem of mainItems) {
+    mainItem.addEventListener("mouseenter", (e) => {
+      let idx = mainList.indexOf(e.currentTarget);
+      let target = subItems.children[idx];
+      Array.from(subItems.children).forEach((item) => item.setAttribute("class", "hidden"));
+      if(target){
+        target.setAttribute("class", "px-3");
+      }
+    });
+  }
 });
 
 // window.onload = function() {
@@ -378,6 +394,61 @@ const Header = () => {
                 </li>
                 <li class="nav--item--li">
                   <a class="nav--item--link" href="news.html">改眉</a>
+                </li>
+              </ul>
+              <ul class="px-3 hidden">
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">眼線A</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">眼線B</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">眼線C</a>
+                </li>
+              </ul>
+              <ul class="px-3 hidden">
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">唇A</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">唇B</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">唇C</a>
+                </li>
+              </ul>
+              <ul class="px-3 hidden">
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">髮際A</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">髮際B</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">髮際C</a>
+                </li>
+              </ul>
+              <ul class="px-3 hidden">
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">AAA</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">BBB</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">CCC</a>
+                </li>
+              </ul>
+              <ul class="px-3 hidden">
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">除色A</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">除色B</a>
+                </li>
+                <li class="nav--item--li">
+                  <a class="nav--item--link" href="news.html">除色C</a>
                 </li>
               </ul>
             </li>
