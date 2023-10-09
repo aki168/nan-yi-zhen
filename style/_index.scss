@@ -43,18 +43,20 @@ main {
       border-radius: 0px 20px 20px 20px;
       position: absolute;
       top: 60px;
-      background-color: rgb(200, 181, 168, 0.6);
+      background-color: rgb(217, 197, 183);
       padding: 20px 20px;
       display: none;
+      width: max-content;
       z-index: 2;
       &--double {
         border-radius: 0px 20px 20px 20px;
         position: absolute;
         top: 60px;
-        background-color: rgb(200, 181, 168, 0.6);
+        background-color: rgb(217, 197, 183);
         padding: 20px 12px;
         width: 180px;
         display: none;
+        width: max-content;
         z-index: 2;
         &--sub {
           letter-spacing: 2px;
@@ -74,7 +76,7 @@ main {
   &--logo {
     display: block;
     margin-top: 36px;
-    width: 240px;
+    width: 200px;
     background-image: url("../images/index/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -82,7 +84,7 @@ main {
   &--logo:hover {
     display: block;
     margin-top: 36px;
-    width: 240px;
+    width: 200px;
     background-image: url("../images/index/logo-w.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -197,8 +199,8 @@ main {
   z-index: 9999;
   opacity: 0;
   img {
-    max-width: 250px;
-    width: 250px;
+    max-width: 200px;
+    width: 200px;
   }
 }
 @keyframes loadinglogo{
@@ -372,7 +374,7 @@ main {
     color: white;
     position: absolute;
     top: 50%;
-    right: 40%;
+    right: calc(50% - 36px);
     z-index: 2;
     font-family: $font-family-3;
   }

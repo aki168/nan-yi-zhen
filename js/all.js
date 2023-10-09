@@ -235,6 +235,12 @@ $(document).ready(function () {
       }
     });
   }
+
+  $(".index--reserve--item").hover(()=>{
+    $(this)
+    .find("h4")
+    .toggleClass("text-yellow-900");
+  })
 });
 
 window.onload = function () {
@@ -261,7 +267,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">關於我們</div>
           <div class="text-white sub-text font-light">about</div>
         </a>
-        <ul class="nav--item--detail w-32 text-center">
+        <ul class="nav--item--detail  text-center">
           <li class="nav--item--li">
             <a class="nav--item--link" href="about.html">品牌介紹</a>
           </li>
@@ -279,7 +285,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">紋繡作品</div>
           <div class="text-white sub-text font-light">portfolio</div>
         </a>
-        <ul class="nav--item--detail w-31">
+        <ul class="nav--item--detail">
           <li class="nav--item--li">
             <a class="nav--item--link" href="portfolio-eyebrown.html">眉 毛</a>
           </li>
@@ -314,7 +320,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">預約與須知</div>
           <div class="text-white sub-text font-light">reserve</div>
         </a>
-        <ul class="nav--item--detail w-32">
+        <ul class="nav--item--detail">
           <li class="nav--item--li">
             <a class="nav--item--link" href="reserve.html">我要預約</a>
           </li>
@@ -335,7 +341,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">常見問題</div>
           <div class="text-white sub-text font-light">Q&A</div>
         </a>
-        <ul class="nav--item--detail w-31">
+        <ul class="nav--item--detail">
           <li class="nav--item--li">
             <a class="nav--item--link" href="qa.html">眉 毛</a>
           </li>
@@ -356,7 +362,7 @@ const Header = () => {
         <!-- 雙表格  -->
         <div class="nav--item--detail--double">
           <ul class="flex">
-            <li class="nav--item--detail--double--main w-1/2">
+            <li class="nav--item--detail--double--main">
               <ul class="px-2 border-solid border-r border-r-white">
                 <li class="nav--item--li">
                   <a class="nav--item--link" href="news.html">眉 毛</a>
@@ -378,7 +384,7 @@ const Header = () => {
                 </li>
               </ul>
             </li>
-            <li class="nav--item--detail--double--sub w-1/2">
+            <li class="nav--item--detail--double--sub">
               <ul class="px-3">
                 <li class="nav--item--li">
                   <a class="nav--item--link" href="news.html">飄眉</a>
@@ -461,7 +467,7 @@ const Header = () => {
           <div class="font-bold pb-[2px] hover:text-yellow-800">紋繡課程</div>
           <div class="text-white sub-text font-light">class</div>
         </a>
-        <ul class="nav--item--detail w-[180px]">
+        <ul class="nav--item--detail">
           <li class="nav--item--li">
             <a class="nav--item--link" href="class.html">開課時間</a>
           </li>
@@ -631,7 +637,7 @@ const Footer = () => {
             src="images/footer/20230612_南以真紋繡_01-1關於我們_15.png"
             alt="icon"
           />
-          <a class="hover:text-yellow-800" target="_blank" href="https://goo.gl/maps/F2JfLudqkwk4jYvB7">高雄市苓雅區廣州一街122巷6號3樓</a>
+          <a class="hover:text-yellow-800" target="_blank" href="https://ppt.cc/fnMZbx">高雄市苓雅區廣州一街122巷6號3樓</a>
         </li>
       </ul>
 
