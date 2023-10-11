@@ -97,16 +97,17 @@ main {
   width: 156px;
   button,
   a {
-    letter-spacing: 4px;
+    letter-spacing: 2px;
   }
   &--menu {
     font-weight: bold;
     text-align: center;
   }
   &--title {
-    color: $main-text-2;
+    color: #d2beae;
     font-family: $font-family-3;
     font-size: 40px;
+    padding-left: 8px;
   }
 }
 .accordion {
@@ -116,9 +117,10 @@ main {
     text-align: center;
   }
   &--title {
-    color: $main-text-2;
+    color: #d2beae;
     font-family: $font-family-3;
     font-size: 40px;
+    padding-left: 8px;
   }
 }
 .breadcrumb {
@@ -513,7 +515,23 @@ main {
 
 .news--card {
   cursor: pointer;
-}
+  img {
+    border-radius: 0.5rem;
+  }
+};
+
+
+.news--card--text {
+  color: #7a6a56;
+};
+
+.news--article--title {
+  h5, h4 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+};
+
 
 /*
   預約與須知 

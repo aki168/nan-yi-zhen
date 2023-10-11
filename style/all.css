@@ -177,16 +177,17 @@ main {
 }
 .sider button,
 .sider a {
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 .sider--menu {
   font-weight: bold;
   text-align: center;
 }
 .sider--title {
-  color: #ab937e;
+  color: #d2beae;
   font-family: "Didot", "GFS Didot", serif;
   font-size: 40px;
+  padding-left: 8px;
 }
 
 .accordion {
@@ -197,9 +198,10 @@ main {
   text-align: center;
 }
 .accordion--title {
-  color: #ab937e;
+  color: #d2beae;
   font-family: "Didot", "GFS Didot", serif;
   font-size: 40px;
+  padding-left: 8px;
 }
 
 .breadcrumb {
@@ -583,6 +585,18 @@ main {
 
 .news--card {
   cursor: pointer;
+}
+.news--card img {
+  border-radius: 0.5rem;
+}
+
+.news--card--text {
+  color: #7a6a56;
+}
+
+.news--article--title h5, .news--article--title h4 {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 /*

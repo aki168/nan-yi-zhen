@@ -246,10 +246,12 @@ $(document).ready(function () {
 window.onload = function () {
   const loading = document.getElementById("loading");
   const content = document.getElementById("content");
-  setTimeout(() => {
-    loading.style.display = "none";
-    content.style.display = "block";
-  }, 400);
+  if (loading && content){
+    setTimeout(() => {
+      loading.style.display = "none";
+      content.style.display = "block";
+    }, 400);
+  }
 };
 
 // [Layout] -----------------------------------------------------------
@@ -661,15 +663,6 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a class="hover:text-yellow-800" href="/" class="hover:opacity-75">
-            <img
-              src="images/footer/chatIcon.jpg"
-              alt="chatIcon"
-              class="rounded-lg drop-shadow-lg"
-            />
-          </a>
-        </li>
-        <li>
           <button class="hover:text-yellow-800 footer--icons--top hover:opacity-75">
             <img
               src="images/footer/topIcon.jpg"
@@ -712,4 +705,6 @@ const Loading = () => {
 document.getElementById("header-placeholder").innerHTML = Header();
 document.getElementById("footer-placeholder").innerHTML = Footer();
 // 換頁的圓形 Loading，不需要時可以註解這行:
-document.getElementById("loading-circle-placeholder").innerHTML = Loading();
+if (document.getElementById("loading-circle-placeholder")) {
+  document.getElementById("loading-circle-placeholder").innerHTML = Loading();
+}
