@@ -258,7 +258,7 @@ window.onload = function () {
 
 const Header = () => {
   return `<header class="nav">
-  <nav class="nyz-container flex justify-around px-4 md:px-0">
+  <nav class="nyz-container flex justify-around md:px-0">
     <a href="index.html" class="nav--logo">
       <img alt="logo" class="hidden" />
     </a>
@@ -497,7 +497,7 @@ const Header = () => {
     <!-- mobile menu btn-->
     <button
       href="/"
-      class="nav--mobile--open md:hidden border border-white py-3 px-5 rounded ml-auto hover:opacity-60"
+      class="nav--mobile--open md:hidden py-3 px-5 rounded ml-auto hover:opacity-60"
     >
       <i class="fa-solid fa-bars text-white"></i>
     </button>
@@ -582,39 +582,39 @@ const Header = () => {
 const Footer = () => {
   return `<footer class="footer">
   <div class="nyz-container py-10 footer--inner">
-    <nav class="md:w-1/2 mx-auto px-6 md:px-0">
-      <h2 class="text-3xl py-4 mb-6 text-center md:text-start cursor-default">
+    <nav class="md:w-1/2 mx-auto px-3 md:px-0">
+      <h2 class="text-3xl py-4 mb-6 cursor-default">
         Nan Yi Zhen
       </h2>
       <ul
-        class="flex flex-col md:flex-row flex-wrap gap-1 text-lg md:text-base mb-6 text-center md:text-start"
+        class="flex flex-col md:flex-row flex-wrap gap-1 text-lg md:text-base mb-6 text-center"
       >
         <li class="footer--item md:w-[23%]">
-          <a class="hover:text-yellow-800" href="about.html">關於我們</a>
+          <a class="hover:text-yellow-800 text-start" href="about.html">關於我們</a>
         </li>
         <li class="footer--item md:w-[23%]">
-          <a class="hover:text-yellow-800" href="portfolio.html">紋繡作品</a>
+          <a class="hover:text-yellow-800 text-start" href="portfolio.html">紋繡作品</a>
         </li>
         <li class="footer--item md:w-[23%]">
-          <a class="hover:text-yellow-800" href="price.html">服務價格</a>
+          <a class="hover:text-yellow-800 text-start" href="price.html">服務價格</a>
         </li>
         <li class="footer--item md:w-[23%]">
-          <a class="hover:text-yellow-800" href="reserve.html">預約&須知</a>
+          <a class="hover:text-yellow-800 text-start" href="reserve.html">預約&須知</a>
         </li>
         <li class="footer--item md:w-[23%]">
-          <a class="hover:text-yellow-800" href="qa.html">常見問題</a>
+          <a class="hover:text-yellow-800 text-start" href="qa.html">常見問題</a>
         </li>
         <li class="footer--item md:w-[23%]">
-          <a class="hover:text-yellow-800" href="news.html">專業文章</a>
+          <a class="hover:text-yellow-800 text-start" href="news.html">專業文章</a>
         </li>
         <li class="footer--item md:w-[23%]">
-          <a class="hover:text-yellow-800" href="class.html">紋繡課程</a>
+          <a class="hover:text-yellow-800 text-start" href="class.html">紋繡課程</a>
         </li>
       </ul>
       <ul
-        class="flex flex-col md:flex-row flex-wrap gap-4 text-lg md:text-base mb-4"
+        class="flex flex-col md:flex-row flex-wrap gap-4 text-xs md:text-base mb-4"
       >
-        <li class="flex flex-wrap md:w-1/3 gap-2">
+        <li class="flex flex-wrap md:w-1/3 gap-1">
           <!-- <i class="fa-solid fa-phone"></i> -->
           <img
             class="object-contain"
@@ -623,7 +623,7 @@ const Footer = () => {
           />
           <a class="hover:text-yellow-800" href="tel:+886928571472">0928-571-472</a>
         </li>
-        <li class="flex flex-wrap md:w-1/2 gap-2">
+        <li class="flex flex-wrap md:w-1/2 gap-1">
           <!-- <i class="fa-solid fa-calendar-days"></i> -->
           <img
             class="object-contain"
@@ -632,7 +632,7 @@ const Footer = () => {
           />
           <a class="hover:text-yellow-800" href="mailto:nanyizhentw@gmail.com">nanyizhentw@gmail.com</a>
         </li>
-        <li class="flex flex-wrap gap-2">
+        <li class="flex flex-wrap gap-1">
           <!-- <i class="fa-solid fa-map-location-dot"></i> -->
           <img
             class="object-contain"

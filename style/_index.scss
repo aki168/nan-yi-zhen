@@ -76,7 +76,7 @@ main {
   &--logo {
     display: block;
     margin-top: 36px;
-    width: 200px;
+    width: 160px;
     background-image: url("../images/index/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -84,13 +84,13 @@ main {
   &--logo:hover {
     display: block;
     margin-top: 36px;
-    width: 200px;
+    width: 160px;
     background-image: url("../images/index/logo-w.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
   &--mobile--open {
-    margin: 32px 0;
+    margin: 22px 0;
   }
 }
 .sider {
@@ -600,6 +600,10 @@ main {
   }
 }
 @media (max-width: 768px) {
+  .nyz-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .index--wrap,
   .about--wrap,
   .news--wrap {
@@ -629,16 +633,34 @@ main {
     padding-bottom: 10px;
   }
   .index--portfolio--title {
-    margin: 16px 0px;
+    margin: 0 0;
+    padding-right: 0;
+    padding-left: 0;
+  };
+  .index--price--title {
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .sider {
     width: 100%;
+  }
+  .sider--menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .about--contain {
     width: 100%;
   }
   .news-nav-btn {
     display: none;
+  }
+  .nav--logo {
+    width: 120px;
+  }
+  .footer {
+    &--icons {
+      right: 20px;
+    }
   }
 }
 
